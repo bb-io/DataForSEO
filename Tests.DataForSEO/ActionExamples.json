@@ -1,0 +1,3409 @@
+{
+  "SerpScreenshot": {
+    "path": "/v3/serp/screenshot",
+    "method": "post",
+    "input": [
+      {
+        "browser_screen_scale_factor": 0.5
+      }
+    ],
+    "requestType": "SerpScreenshotRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpScreenshotResultInfo"
+  },
+  "SerpAiSummary": {
+    "path": "/v3/serp/ai_summary",
+    "method": "post",
+    "input": [
+      {
+        "prompt": "explain what DataForSEO is",
+        "include_links": true,
+        "fetch_content": true
+      }
+    ],
+    "requestType": "SerpAiSummaryRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpAiSummaryResultInfo"
+  },
+  "SerpGoogleOrganicTaskPost": {
+    "path": "/v3/serp/google/organic/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      },
+      {
+        "language_name": "English",
+        "location_name": "United States",
+        "keyword": "albert einstein",
+        "priority": 2,
+        "tag": "some_string_123"
+      },
+      {
+        "url": "https://www.google.co.uk/search?q=albert%20einstein&hl=en&gl=GB&uule=w+CAIQIFISCXXeIa8LoNhHEZkq1d1aOpZS",
+        "postback_data": "html"
+      }
+    ],
+    "requestType": "SerpGoogleOrganicTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpGoogleOrganicTaskGetAdvanced": {
+    "path": "/v3/serp/google/organic/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleOrganicTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleOrganicTaskGetAdvancedResultInfo"
+  },
+  "SerpGoogleOrganicTaskGetHtml": {
+    "path": "/v3/serp/google/organic/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleOrganicTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleOrganicTaskGetHtmlResultInfo"
+  },
+  "SerpGoogleOrganicLiveAdvanced": {
+    "path": "/v3/serp/google/organic/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein",
+        "calculate_rectangles": true
+      }
+    ],
+    "requestType": "SerpGoogleOrganicLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleOrganicLiveAdvancedResultInfo"
+  },
+  "SerpGoogleOrganicLiveHtml": {
+    "path": "/v3/serp/google/organic/live/html",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleOrganicLiveHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleOrganicLiveHtmlResultInfo"
+  },
+  "SerpGoogleAiModeTaskPost": {
+    "path": "/v3/serp/google/ai_mode/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "what is google ai mode"
+      }
+    ],
+    "requestType": "SerpGoogleAiModeTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpGoogleAiModeTaskGetAdvanced": {
+    "path": "/v3/serp/google/ai_mode/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleAiModeTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleAiModeTaskGetAdvancedResultInfo"
+  },
+  "SerpGoogleAiModeTaskGetHtml": {
+    "path": "/v3/serp/google/ai_mode/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleAiModeTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleAiModeTaskGetHtmlResultInfo"
+  },
+  "SerpGoogleAiModeLiveAdvanced": {
+    "path": "/v3/serp/google/ai_mode/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "what is google ai mode"
+      }
+    ],
+    "requestType": "SerpGoogleAiModeLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleAiModeLiveAdvancedResultInfo"
+  },
+  "SerpGoogleAiModeLiveHtml": {
+    "path": "/v3/serp/google/ai_mode/live/html",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleAiModeLiveHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleAiModeLiveHtmlResultInfo"
+  },
+  "SerpGoogleMapsTaskPost": {
+    "path": "/v3/serp/google/maps/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleMapsTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpGoogleMapsTaskGetAdvanced": {
+    "path": "/v3/serp/google/maps/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleMapsTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleMapsTaskGetAdvancedResultInfo"
+  },
+  "SerpGoogleMapsLiveAdvanced": {
+    "path": "/v3/serp/google/maps/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleMapsLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleMapsLiveAdvancedResultInfo"
+  },
+  "SerpGoogleLocalFinderTaskPost": {
+    "path": "/v3/serp/google/local_finder/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "local nail services"
+      }
+    ],
+    "requestType": "SerpGoogleLocalFinderTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpGoogleLocalFinderTaskGetAdvanced": {
+    "path": "/v3/serp/google/local_finder/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleLocalFinderTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleLocalFinderTaskGetAdvancedResultInfo"
+  },
+  "SerpGoogleLocalFinderTaskGetHtml": {
+    "path": "/v3/serp/google/local_finder/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleLocalFinderTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleLocalFinderTaskGetHtmlResultInfo"
+  },
+  "SerpGoogleLocalFinderLiveAdvanced": {
+    "path": "/v3/serp/google/local_finder/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "local nail services"
+      }
+    ],
+    "requestType": "SerpGoogleLocalFinderLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleLocalFinderLiveAdvancedResultInfo"
+  },
+  "SerpGoogleLocalFinderLiveHtml": {
+    "path": "/v3/serp/google/local_finder/live/html",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleLocalFinderLiveHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleLocalFinderLiveHtmlResultInfo"
+  },
+  "SerpGoogleNewsTaskPost": {
+    "path": "/v3/serp/google/news/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleNewsTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpGoogleNewsTaskGetAdvanced": {
+    "path": "/v3/serp/google/news/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleNewsTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleNewsTaskGetAdvancedResultInfo"
+  },
+  "SerpGoogleNewsTaskGetHtml": {
+    "path": "/v3/serp/google/news/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleNewsTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleNewsTaskGetHtmlResultInfo"
+  },
+  "SerpGoogleNewsLiveAdvanced": {
+    "path": "/v3/serp/google/news/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "android"
+      }
+    ],
+    "requestType": "SerpGoogleNewsLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleNewsLiveAdvancedResultInfo"
+  },
+  "SerpGoogleNewsLiveHtml": {
+    "path": "/v3/serp/google/news/live/html",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleNewsLiveHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleNewsLiveHtmlResultInfo"
+  },
+  "SerpGoogleImagesTaskPost": {
+    "path": "/v3/serp/google/images/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleImagesTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpGoogleImagesTaskGetAdvanced": {
+    "path": "/v3/serp/google/images/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleImagesTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleImagesTaskGetAdvancedResultInfo"
+  },
+  "SerpGoogleImagesTaskGetHtml": {
+    "path": "/v3/serp/google/images/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleImagesTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleImagesTaskGetHtmlResultInfo"
+  },
+  "SerpGoogleImagesLiveAdvanced": {
+    "path": "/v3/serp/google/images/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleImagesLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleImagesLiveAdvancedResultInfo"
+  },
+  "SerpGoogleImagesLiveHtml": {
+    "path": "/v3/serp/google/images/live/html",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpGoogleImagesLiveHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleImagesLiveHtmlResultInfo"
+  },
+  "SerpGoogleSearchByImageTaskPost": {
+    "path": "/v3/serp/google/search_by_image/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "image_url": "https://dataforseo.com/wp-content/uploads/2016/11/data_for_seo_light_429.png"
+      }
+    ],
+    "requestType": "SerpGoogleSearchByImageTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpGoogleSearchByImageTaskGetAdvanced": {
+    "path": "/v3/serp/google/search_by_image/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleSearchByImageTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleSearchByImageTaskGetAdvancedResultInfo"
+  },
+  "SerpGoogleAutocompleteTaskPost": {
+    "path": "/v3/serp/google/autocomplete/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein",
+        "cursor_pointer": 6
+      }
+    ],
+    "requestType": "SerpGoogleAutocompleteTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpGoogleAutocompleteTaskGetAdvanced": {
+    "path": "/v3/serp/google/autocomplete/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpGoogleAutocompleteTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleAutocompleteTaskGetAdvancedResultInfo"
+  },
+  "SerpGoogleAutocompleteLiveAdvanced": {
+    "path": "/v3/serp/google/autocomplete/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein",
+        "client": "gws-wiz-serp"
+      }
+    ],
+    "requestType": "SerpGoogleAutocompleteLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpGoogleAutocompleteLiveAdvancedResultInfo"
+  },
+  "SerpBingOrganicTaskPost": {
+    "path": "/v3/serp/bing/organic/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpBingOrganicTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpBingOrganicTaskGetAdvanced": {
+    "path": "/v3/serp/bing/organic/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpBingOrganicTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpBingOrganicTaskGetAdvancedResultInfo"
+  },
+  "SerpBingOrganicTaskGetHtml": {
+    "path": "/v3/serp/bing/organic/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpBingOrganicTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpBingOrganicTaskGetHtmlResultInfo"
+  },
+  "SerpBingOrganicLiveAdvanced": {
+    "path": "/v3/serp/bing/organic/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "flight ticket new york san francisco"
+      }
+    ],
+    "requestType": "SerpBingOrganicLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpBingOrganicLiveAdvancedResultInfo"
+  },
+  "SerpBingOrganicLiveHtml": {
+    "path": "/v3/serp/bing/organic/live/html",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpBingOrganicLiveHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpBingOrganicLiveHtmlResultInfo"
+  },
+  "SerpYoutubeVideoInfoTaskPost": {
+    "path": "/v3/serp/youtube/video_info/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "video_id": "vQXvyV0zIP4"
+      }
+    ],
+    "requestType": "SerpYoutubeVideoInfoTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpYoutubeVideoInfoTaskGetAdvanced": {
+    "path": "/v3/serp/youtube/video_info/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpYoutubeVideoInfoTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpYoutubeVideoInfoTaskGetAdvancedResultInfo"
+  },
+  "SerpYoutubeVideoInfoLiveAdvanced": {
+    "path": "/v3/serp/youtube/video_info/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "video_id": "vQXvyV0zIP4"
+      }
+    ],
+    "requestType": "SerpYoutubeVideoInfoLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpYoutubeVideoInfoLiveAdvancedResultInfo"
+  },
+  "SerpYoutubeOrganicTaskPost": {
+    "path": "/v3/serp/youtube/organic/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "audi"
+      }
+    ],
+    "requestType": "SerpYoutubeOrganicTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpYoutubeOrganicTaskGetAdvanced": {
+    "path": "/v3/serp/youtube/organic/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpYoutubeOrganicTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpYoutubeOrganicTaskGetAdvancedResultInfo"
+  },
+  "SerpYoutubeOrganicLiveAdvanced": {
+    "path": "/v3/serp/youtube/organic/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "audi"
+      }
+    ],
+    "requestType": "SerpYoutubeOrganicLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpYoutubeOrganicLiveAdvancedResultInfo"
+  },
+  "SerpYahooOrganicTaskPost": {
+    "path": "/v3/serp/yahoo/organic/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpYahooOrganicTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpYahooOrganicTaskGetAdvanced": {
+    "path": "/v3/serp/yahoo/organic/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpYahooOrganicTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpYahooOrganicTaskGetAdvancedResultInfo"
+  },
+  "SerpYahooOrganicTaskGetHtml": {
+    "path": "/v3/serp/yahoo/organic/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpYahooOrganicTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpYahooOrganicTaskGetHtmlResultInfo"
+  },
+  "SerpYahooOrganicLiveAdvanced": {
+    "path": "/v3/serp/yahoo/organic/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpYahooOrganicLiveAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpYahooOrganicLiveAdvancedResultInfo"
+  },
+  "SerpYahooOrganicLiveHtml": {
+    "path": "/v3/serp/yahoo/organic/live/html",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpYahooOrganicLiveHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpYahooOrganicLiveHtmlResultInfo"
+  },
+  "SerpBaiduOrganicTaskPost": {
+    "path": "/v3/serp/baidu/organic/task_post",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2156,
+        "keyword": "best iphone ever",
+        "tag": "some_string_123",
+        "priority": 2
+      }
+    ],
+    "requestType": "SerpBaiduOrganicTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpBaiduOrganicTaskGetAdvanced": {
+    "path": "/v3/serp/baidu/organic/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpBaiduOrganicTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpBaiduOrganicTaskGetAdvancedResultInfo"
+  },
+  "SerpBaiduOrganicTaskGetHtml": {
+    "path": "/v3/serp/baidu/organic/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpBaiduOrganicTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpBaiduOrganicTaskGetHtmlResultInfo"
+  },
+  "SerpNaverOrganicTaskPost": {
+    "path": "/v3/serp/naver/organic/task_post",
+    "method": "post",
+    "input": [
+      {
+        "keyword": "albert einstein",
+        "device": "desktop",
+        "tag": "some_string_123",
+        "postback_data": "regular"
+      }
+    ],
+    "requestType": "SerpNaverOrganicTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpNaverOrganicTaskGetAdvanced": {
+    "path": "/v3/serp/naver/organic/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpNaverOrganicTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpNaverOrganicTaskGetAdvancedResultInfo"
+  },
+  "SerpNaverOrganicTaskGetHtml": {
+    "path": "/v3/serp/naver/organic/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpNaverOrganicTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpNaverOrganicTaskGetHtmlResultInfo"
+  },
+  "SerpSeznamOrganicTaskPost": {
+    "path": "/v3/serp/seznam/organic/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "cs",
+        "location_code": 2203,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "SerpSeznamOrganicTaskPostRequest",
+    "actionType": "SerpActions",
+    "resultType": "DynamicResult"
+  },
+  "SerpSeznamOrganicTaskGetAdvanced": {
+    "path": "/v3/serp/seznam/organic/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpSeznamOrganicTaskGetAdvancedRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpSeznamOrganicTaskGetAdvancedResultInfo"
+  },
+  "SerpSeznamOrganicTaskGetHtml": {
+    "path": "/v3/serp/seznam/organic/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "SerpSeznamOrganicTaskGetHtmlRequest",
+    "actionType": "SerpActions",
+    "resultType": "SerpSeznamOrganicTaskGetHtmlResultInfo"
+  },
+  "LabsGoogleAvailableHistory": {
+    "path": "/v3/dataforseo_labs/google/available_history",
+    "method": "get",
+    "input": [],
+    "requestType": "LabsGoogleAvailableHistoryRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleAvailableHistoryResultInfo"
+  },
+  "LabsGoogleKeywordsForSiteLive": {
+    "path": "/v3/dataforseo_labs/google/keywords_for_site/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "apple.com",
+        "language_code": "en",
+        "location_code": 2840,
+        "include_serp_info": true,
+        "include_subdomains": true,
+        "filters": [
+          "serp_info.se_results_count",
+          ">",
+          0
+        ],
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleKeywordsForSiteLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleKeywordsForSiteLiveResultInfo"
+  },
+  "LabsGoogleRelatedKeywordsLive": {
+    "path": "/v3/dataforseo_labs/google/related_keywords/live",
+    "method": "post",
+    "input": [
+      {
+        "keyword": "phone",
+        "language_name": "English",
+        "location_code": 2840,
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleRelatedKeywordsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleRelatedKeywordsLiveResultInfo"
+  },
+  "LabsGoogleKeywordSuggestionsLive": {
+    "path": "/v3/dataforseo_labs/google/keyword_suggestions/live",
+    "method": "post",
+    "input": [
+      {
+        "keyword": "phone",
+        "location_code": 2840,
+        "language_code": "en",
+        "include_serp_info": true,
+        "include_seed_keyword": true,
+        "limit": 1
+      }
+    ],
+    "requestType": "LabsGoogleKeywordSuggestionsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleKeywordSuggestionsLiveResultInfo"
+  },
+  "LabsGoogleKeywordIdeasLive": {
+    "path": "/v3/dataforseo_labs/google/keyword_ideas/live",
+    "method": "post",
+    "input": [
+      {
+        "keywords": [
+          "phone",
+          "watch"
+        ],
+        "location_code": 2840,
+        "language_code": "en",
+        "include_serp_info": true,
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleKeywordIdeasLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleKeywordIdeasLiveResultInfo"
+  },
+  "LabsGoogleBulkKeywordDifficultyLive": {
+    "path": "/v3/dataforseo_labs/google/bulk_keyword_difficulty/live",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "language_code": "en",
+        "keywords": [
+          "dentist new york",
+          "pizza brooklyn",
+          "car dealer los angeles"
+        ]
+      }
+    ],
+    "requestType": "LabsGoogleBulkKeywordDifficultyLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleBulkKeywordDifficultyLiveResultInfo"
+  },
+  "LabsGoogleSearchIntentLive": {
+    "path": "/v3/dataforseo_labs/google/search_intent/live",
+    "method": "post",
+    "input": [
+      {
+        "keywords": [
+          "login page",
+          "audi a7",
+          "elon musk",
+          "milk store new york"
+        ]
+      }
+    ],
+    "requestType": "LabsGoogleSearchIntentLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleSearchIntentLiveResultInfo"
+  },
+  "LabsGoogleCategoriesForDomainLive": {
+    "path": "/v3/dataforseo_labs/google/categories_for_domain/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "dataforseo.com",
+        "language_code": "en",
+        "location_name": "United States",
+        "item_types": [
+          "paid",
+          "organic",
+          "featured_snippet",
+          "local_pack"
+        ],
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleCategoriesForDomainLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleCategoriesForDomainLiveResultInfo"
+  },
+  "LabsGoogleCategoriesForKeywordsLive": {
+    "path": "/v3/dataforseo_labs/google/categories_for_keywords/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "keywords": [
+          "dentist new york",
+          "pizza brooklyn",
+          "car dealer los angeles"
+        ]
+      }
+    ],
+    "requestType": "LabsGoogleCategoriesForKeywordsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleCategoriesForKeywordsLiveResultInfo"
+  },
+  "LabsGoogleKeywordsForCategoriesLive": {
+    "path": "/v3/dataforseo_labs/google/keywords_for_categories/live",
+    "method": "post",
+    "input": [
+      {
+        "category_codes": [
+          "12191",
+          "12193"
+        ],
+        "language_name": "English",
+        "location_code": 2840,
+        "include_serp_info": true,
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleKeywordsForCategoriesLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleKeywordsForCategoriesLiveResultInfo"
+  },
+  "LabsGoogleDomainMetricsByCategoriesLive": {
+    "path": "/v3/dataforseo_labs/google/domain_metrics_by_categories/live",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "language_code": "en",
+        "category_codes": [
+          "13418",
+          "11494"
+        ],
+        "first_date": "2021-06-01",
+        "second_date": "2021-10-01",
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleDomainMetricsByCategoriesLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleDomainMetricsByCategoriesLiveResultInfo"
+  },
+  "LabsGoogleTopSearchesLive": {
+    "path": "/v3/dataforseo_labs/google/top_searches/live",
+    "method": "post",
+    "input": [
+      {
+        "language_name": "English",
+        "location_code": 2840,
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleTopSearchesLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleTopSearchesLiveResultInfo"
+  },
+  "LabsGoogleRankedKeywordsLive": {
+    "path": "/v3/dataforseo_labs/google/ranked_keywords/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "dataforseo.com",
+        "language_name": "English",
+        "location_name": "United States",
+        "load_rank_absolute": true,
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleRankedKeywordsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleRankedKeywordsLiveResultInfo"
+  },
+  "LabsGoogleSerpCompetitorsLive": {
+    "path": "/v3/dataforseo_labs/google/serp_competitors/live",
+    "method": "post",
+    "input": [
+      {
+        "keywords": [
+          "phone"
+        ],
+        "language_name": "English",
+        "location_code": 2840,
+        "item_types": [
+          "organic"
+        ],
+        "limit": 5
+      }
+    ],
+    "requestType": "LabsGoogleSerpCompetitorsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleSerpCompetitorsLiveResultInfo"
+  },
+  "LabsGoogleCompetitorsDomainLive": {
+    "path": "/v3/dataforseo_labs/google/competitors_domain/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "newmouth.com",
+        "intersecting_domains": [
+          "dentaly.org",
+          "health.com",
+          "trysnow.com"
+        ],
+        "language_name": "English",
+        "location_code": 2840,
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleCompetitorsDomainLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleCompetitorsDomainLiveResultInfo"
+  },
+  "LabsGoogleDomainIntersectionLive": {
+    "path": "/v3/dataforseo_labs/google/domain_intersection/live",
+    "method": "post",
+    "input": [
+      {
+        "target1": "mom.com",
+        "target2": "quora.com",
+        "language_code": "en",
+        "location_code": 2840,
+        "include_serp_info": true,
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleDomainIntersectionLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleDomainIntersectionLiveResultInfo"
+  },
+  "LabsGoogleSubdomainsLive": {
+    "path": "/v3/dataforseo_labs/google/subdomains/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "dataforseo.com",
+        "language_name": "English",
+        "location_code": 2840,
+        "filters": [
+          [
+            "metrics.organic.pos_1",
+            "<>",
+            0
+          ],
+          "or",
+          [
+            "metrics.organic.pos_2_3",
+            "<>",
+            0
+          ]
+        ]
+      }
+    ],
+    "requestType": "LabsGoogleSubdomainsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleSubdomainsLiveResultInfo"
+  },
+  "LabsGoogleRelevantPagesLive": {
+    "path": "/v3/dataforseo_labs/google/relevant_pages/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "amazon.com",
+        "language_name": "English",
+        "location_code": 2840,
+        "filters": [
+          [
+            "metrics.organic.pos_1",
+            "<>",
+            0
+          ],
+          "or",
+          [
+            "metrics.organic.pos_2_3",
+            "<>",
+            0
+          ]
+        ],
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGoogleRelevantPagesLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleRelevantPagesLiveResultInfo"
+  },
+  "LabsGoogleDomainRankOverviewLive": {
+    "path": "/v3/dataforseo_labs/google/domain_rank_overview/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "dataforseo.com",
+        "language_name": "English",
+        "location_code": 2840
+      }
+    ],
+    "requestType": "LabsGoogleDomainRankOverviewLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleDomainRankOverviewLiveResultInfo"
+  },
+  "LabsGoogleHistoricalSerpsLive": {
+    "path": "/v3/dataforseo_labs/google/historical_serps/live",
+    "method": "post",
+    "input": [
+      {
+        "keyword": "albert einstein",
+        "datetime_from": "2026-10-24 16:19:26",
+        "datetime_to": "2026-11-03 16:19:26",
+        "location_code": 2840,
+        "language_code": "en",
+        "limit": 10
+      }
+    ],
+    "requestType": "LabsGoogleHistoricalSerpsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleHistoricalSerpsLiveResultInfo"
+  },
+  "LabsGoogleHistoricalRankOverviewLive": {
+    "path": "/v3/dataforseo_labs/google/historical_rank_overview/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "dataforseo.com",
+        "location_code": 2840,
+        "language_code": "en",
+        "date_from": "2021-01-01",
+        "date_to": "2021-03-29"
+      }
+    ],
+    "requestType": "LabsGoogleHistoricalRankOverviewLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleHistoricalRankOverviewLiveResultInfo"
+  },
+  "LabsGooglePageIntersectionLive": {
+    "path": "/v3/dataforseo_labs/google/page_intersection/live",
+    "method": "post",
+    "input": [
+      {
+        "pages": {
+          "1": "https://forbes.com",
+          "2": "https://cnn.com/*"
+        },
+        "language_name": "English",
+        "location_code": 2840,
+        "include_serp_info": true,
+        "limit": 3
+      }
+    ],
+    "requestType": "LabsGooglePageIntersectionLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGooglePageIntersectionLiveResultInfo"
+  },
+  "LabsGoogleHistoricalSearchVolumeLive": {
+    "path": "/v3/dataforseo_labs/google/historical_search_volume/live",
+    "method": "post",
+    "input": [
+      {
+        "keywords": [
+          "phone",
+          "watch"
+        ],
+        "language_name": "English",
+        "location_code": 2840,
+        "include_serp_info": true
+      }
+    ],
+    "requestType": "LabsGoogleHistoricalSearchVolumeLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleHistoricalSearchVolumeLiveResultInfo"
+  },
+  "LabsGoogleBulkTrafficEstimationLive": {
+    "path": "/v3/dataforseo_labs/google/bulk_traffic_estimation/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": [
+          "dataforseo.com",
+          "cnn.com",
+          "forbes.com"
+        ],
+        "location_code": 2840,
+        "language_code": "en",
+        "item_types": [
+          "organic",
+          "paid"
+        ]
+      }
+    ],
+    "requestType": "LabsGoogleBulkTrafficEstimationLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleBulkTrafficEstimationLiveResultInfo"
+  },
+  "LabsGoogleHistoricalBulkTrafficEstimationLive": {
+    "path": "/v3/dataforseo_labs/google/historical_bulk_traffic_estimation/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": [
+          "dataforseo.com",
+          "cnn.com",
+          "forbes.com"
+        ],
+        "location_code": 2840,
+        "language_code": "en",
+        "date_from": "2021-01-01",
+        "date_to": "2021-03-29",
+        "item_types": [
+          "organic",
+          "paid"
+        ]
+      }
+    ],
+    "requestType": "LabsGoogleHistoricalBulkTrafficEstimationLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleHistoricalBulkTrafficEstimationLiveResultInfo"
+  },
+  "LabsGoogleHistoricalKeywordDataLive": {
+    "path": "/v3/dataforseo_labs/google/historical_keyword_data/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keywords": [
+          "iphone"
+        ]
+      }
+    ],
+    "requestType": "LabsGoogleHistoricalKeywordDataLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleHistoricalKeywordDataLiveResultInfo"
+  },
+  "LabsGoogleKeywordOverviewLive": {
+    "path": "/v3/dataforseo_labs/google/keyword_overview/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "include_clickstream_data": true,
+        "include_serp_info": true,
+        "keywords": [
+          "iphone"
+        ]
+      }
+    ],
+    "requestType": "LabsGoogleKeywordOverviewLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsGoogleKeywordOverviewLiveResultInfo"
+  },
+  "LabsAmazonBulkSearchVolumeLive": {
+    "path": "/v3/dataforseo_labs/amazon/bulk_search_volume/live",
+    "method": "post",
+    "input": [
+      {
+        "keywords": [
+          "buy laptop",
+          "cheap laptops for sale",
+          "purchase laptop"
+        ],
+        "location_code": 2840,
+        "language_code": "en"
+      }
+    ],
+    "requestType": "LabsAmazonBulkSearchVolumeLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsAmazonBulkSearchVolumeLiveResultInfo"
+  },
+  "LabsAmazonRelatedKeywordsLive": {
+    "path": "/v3/dataforseo_labs/amazon/related_keywords/live",
+    "method": "post",
+    "input": [
+      {
+        "keyword": "computer mouse",
+        "language_name": "English",
+        "location_code": 2840,
+        "limit": 5,
+        "include_seed_keyword": true
+      }
+    ],
+    "requestType": "LabsAmazonRelatedKeywordsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsAmazonRelatedKeywordsLiveResultInfo"
+  },
+  "LabsAmazonRankedKeywordsLive": {
+    "path": "/v3/dataforseo_labs/amazon/ranked_keywords/live",
+    "method": "post",
+    "input": [
+      {
+        "asin": "B00R92CL5E",
+        "location_code": 2840,
+        "language_code": "en"
+      }
+    ],
+    "requestType": "LabsAmazonRankedKeywordsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsAmazonRankedKeywordsLiveResultInfo"
+  },
+  "LabsAmazonProductRankOverviewLive": {
+    "path": "/v3/dataforseo_labs/amazon/product_rank_overview/live",
+    "method": "post",
+    "input": [
+      {
+        "asins": [
+          "B001TJ3HUG",
+          "B01LW2SL7R"
+        ],
+        "language_name": "English",
+        "location_code": 2840
+      }
+    ],
+    "requestType": "LabsAmazonProductRankOverviewLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsAmazonProductRankOverviewLiveResultInfo"
+  },
+  "LabsAmazonProductCompetitorsLive": {
+    "path": "/v3/dataforseo_labs/amazon/product_competitors/live",
+    "method": "post",
+    "input": [
+      {
+        "asin": "019005476X",
+        "location_code": 2840,
+        "language_code": "en"
+      }
+    ],
+    "requestType": "LabsAmazonProductCompetitorsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsAmazonProductCompetitorsLiveResultInfo"
+  },
+  "LabsAmazonProductKeywordIntersectionsLive": {
+    "path": "/v3/dataforseo_labs/amazon/product_keyword_intersections/live",
+    "method": "post",
+    "input": [
+      {
+        "asins": {
+          "1": "B09172433Z",
+          "2": "B07GBZ4Q68",
+          "3": "B07GCKQD77"
+        },
+        "language_name": "English",
+        "location_code": 2840
+      }
+    ],
+    "requestType": "LabsAmazonProductKeywordIntersectionsLiveRequest",
+    "actionType": "LabsActions",
+    "resultType": "DataForSEOLabsAmazonProductKeywordIntersectionsLiveResultInfo"
+  },
+  "KeywordsGoogleAdsSearchVolumeTaskPost": {
+    "path": "/v3/keywords_data/google_ads/search_volume/task_post",
+    "method": "post",
+    "input": [
+      {
+        "location_name": "United States",
+        "keywords": [
+          "buy laptop",
+          "cheap laptops for sale",
+          "purchase laptop"
+        ]
+      }
+    ],
+    "requestType": "KeywordsGoogleAdsSearchVolumeTaskPostRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "DynamicResult"
+  },
+  "KeywordsGoogleAdsSearchVolumeTaskGet": {
+    "path": "/v3/keywords_data/google_ads/search_volume/task_get/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "KeywordsGoogleAdsSearchVolumeTaskGetRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataGoogleAdsSearchVolumeTaskGetResultInfo"
+  },
+  "KeywordsGoogleAdsSearchVolumeLive": {
+    "path": "/v3/keywords_data/google_ads/search_volume/live",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "keywords": [
+          "buy laptop",
+          "cheap laptops for sale",
+          "purchase laptop"
+        ],
+        "date_from": "2021-08-01",
+        "search_partners": true
+      }
+    ],
+    "requestType": "KeywordsGoogleAdsSearchVolumeLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataGoogleAdsSearchVolumeLiveResultInfo"
+  },
+  "KeywordsGoogleAdsKeywordsForSiteTaskPost": {
+    "path": "/v3/keywords_data/google_ads/keywords_for_site/task_post",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "target": "dataforseo.com"
+      }
+    ],
+    "requestType": "KeywordsGoogleAdsKeywordsForSiteTaskPostRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "DynamicResult"
+  },
+  "KeywordsGoogleAdsKeywordsForSiteTaskGet": {
+    "path": "/v3/keywords_data/google_ads/keywords_for_site/task_get/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "KeywordsGoogleAdsKeywordsForSiteTaskGetRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataGoogleAdsKeywordsForSiteTaskGetResultInfo"
+  },
+  "KeywordsGoogleAdsKeywordsForSiteLive": {
+    "path": "/v3/keywords_data/google_ads/keywords_for_site/live",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "target": "dataforseo.com"
+      }
+    ],
+    "requestType": "KeywordsGoogleAdsKeywordsForSiteLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataGoogleAdsKeywordsForSiteLiveResultInfo"
+  },
+  "KeywordsGoogleAdsKeywordsForKeywordsTaskPost": {
+    "path": "/v3/keywords_data/google_ads/keywords_for_keywords/task_post",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "keywords": [
+          "phone",
+          "cellphone"
+        ]
+      }
+    ],
+    "requestType": "KeywordsGoogleAdsKeywordsForKeywordsTaskPostRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "DynamicResult"
+  },
+  "KeywordsGoogleAdsKeywordsForKeywordsTaskGet": {
+    "path": "/v3/keywords_data/google_ads/keywords_for_keywords/task_get/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "KeywordsGoogleAdsKeywordsForKeywordsTaskGetRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataGoogleAdsKeywordsForKeywordsTaskGetResultInfo"
+  },
+  "KeywordsGoogleAdsKeywordsForKeywordsLive": {
+    "path": "/v3/keywords_data/google_ads/keywords_for_keywords/live",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "keywords": [
+          "phone",
+          "cellphone"
+        ]
+      }
+    ],
+    "requestType": "KeywordsGoogleAdsKeywordsForKeywordsLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataGoogleAdsKeywordsForKeywordsLiveResultInfo"
+  },
+  "KeywordsGoogleTrendsExploreTaskPost": {
+    "path": "/v3/keywords_data/google_trends/explore/task_post",
+    "method": "post",
+    "input": [
+      {
+        "date_from": "2019-01-01",
+        "date_to": "2020-01-01",
+        "type": "youtube",
+        "category_code": 3,
+        "keywords": [
+          "seo api",
+          "rank api"
+        ]
+      }
+    ],
+    "requestType": "KeywordsGoogleTrendsExploreTaskPostRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "DynamicResult"
+  },
+  "KeywordsGoogleTrendsExploreTaskGet": {
+    "path": "/v3/keywords_data/google_trends/explore/task_get/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "KeywordsGoogleTrendsExploreTaskGetRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataGoogleTrendsExploreTaskGetResultInfo"
+  },
+  "KeywordsGoogleTrendsExploreLive": {
+    "path": "/v3/keywords_data/google_trends/explore/live",
+    "method": "post",
+    "input": [
+      {
+        "location_name": "United States",
+        "date_from": "2019-01-01",
+        "date_to": "2020-01-01",
+        "type": "youtube",
+        "category_code": 3,
+        "keywords": [
+          "rugby",
+          "cricket"
+        ]
+      }
+    ],
+    "requestType": "KeywordsGoogleTrendsExploreLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataGoogleTrendsExploreLiveResultInfo"
+  },
+  "KeywordsDataForSEOTrendsExploreLive": {
+    "path": "/v3/keywords_data/dataforseo_trends/explore/live",
+    "method": "post",
+    "input": [
+      {
+        "keywords": [
+          "iphone 14",
+          "samsung s23"
+        ],
+        "location_code": 2840
+      }
+    ],
+    "requestType": "KeywordsDataForSEOTrendsExploreLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataDataForSEOTrendsExploreLiveResultInfo"
+  },
+  "KeywordsDataForSEOTrendsSubregionInterestsLive": {
+    "path": "/v3/keywords_data/dataforseo_trends/subregion_interests/live",
+    "method": "post",
+    "input": [
+      {
+        "keywords": [
+          "rugby",
+          "cricket"
+        ],
+        "date_from": "2023-01-01",
+        "date_to": "2024-01-01",
+        "type": "web",
+        "location_name": "United States"
+      }
+    ],
+    "requestType": "KeywordsDataForSEOTrendsSubregionInterestsLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataDataForSEOTrendsSubregionInterestsLiveResultInfo"
+  },
+  "KeywordsDataForSEOTrendsDemographyLive": {
+    "path": "/v3/keywords_data/dataforseo_trends/demography/live",
+    "method": "post",
+    "input": [
+      {
+        "keywords": [
+          "rugby",
+          "cricket"
+        ],
+        "date_from": "2023-01-01",
+        "date_to": "2024-01-01",
+        "type": "web",
+        "location_name": "United States"
+      }
+    ],
+    "requestType": "KeywordsDataForSEOTrendsDemographyLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataDataForSEOTrendsDemographyLiveResultInfo"
+  },
+  "KeywordsDataForSEOTrendsMergedDataLive": {
+    "path": "/v3/keywords_data/dataforseo_trends/merged_data/live",
+    "method": "post",
+    "input": [
+      {
+        "keywords": [
+          "rugby",
+          "cricket"
+        ],
+        "date_from": "2023-01-01",
+        "date_to": "2024-01-01",
+        "type": "web",
+        "location_name": "United States"
+      }
+    ],
+    "requestType": "KeywordsDataForSEOTrendsMergedDataLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataDataForSEOTrendsMergedDataLiveResultInfo"
+  },
+  "KeywordsBingSearchVolumeTaskPost": {
+    "path": "/v3/keywords_data/bing/search_volume/task_post",
+    "method": "post",
+    "input": [
+      {
+        "location_name": "United States",
+        "language_name": "English",
+        "keywords": [
+          "average page rpm adsense",
+          "adsense blank ads how long",
+          "leads and prospects"
+        ]
+      }
+    ],
+    "requestType": "KeywordsBingSearchVolumeTaskPostRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "DynamicResult"
+  },
+  "KeywordsBingSearchVolumeTaskGet": {
+    "path": "/v3/keywords_data/bing/search_volume/task_get/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "KeywordsBingSearchVolumeTaskGetRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingSearchVolumeTaskGetResultInfo"
+  },
+  "KeywordsBingSearchVolumeLive": {
+    "path": "/v3/keywords_data/bing/search_volume/live",
+    "method": "post",
+    "input": [
+      {
+        "location_name": "United States",
+        "language_code": "en",
+        "keywords": [
+          "tom and jerry",
+          "silicon valley",
+          "spider man"
+        ]
+      }
+    ],
+    "requestType": "KeywordsBingSearchVolumeLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingSearchVolumeLiveResultInfo"
+  },
+  "KeywordsBingKeywordsForSiteTaskPost": {
+    "path": "/v3/keywords_data/bing/keywords_for_site/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "target": "dataforseo.com"
+      }
+    ],
+    "requestType": "KeywordsBingKeywordsForSiteTaskPostRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "DynamicResult"
+  },
+  "KeywordsBingKeywordsForSiteTaskGet": {
+    "path": "/v3/keywords_data/bing/keywords_for_site/task_get/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "KeywordsBingKeywordsForSiteTaskGetRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingKeywordsForSiteTaskGetResultInfo"
+  },
+  "KeywordsBingKeywordsForSiteLive": {
+    "path": "/v3/keywords_data/bing/keywords_for_site/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "target": "dataforseo.com"
+      }
+    ],
+    "requestType": "KeywordsBingKeywordsForSiteLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingKeywordsForSiteLiveResultInfo"
+  },
+  "KeywordsBingKeywordsForKeywordsTaskPost": {
+    "path": "/v3/keywords_data/bing/keywords_for_keywords/task_post",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "language_code": "en",
+        "keywords": [
+          "average page rpm adsense",
+          "adsense blank ads how long",
+          "leads and prospects"
+        ]
+      }
+    ],
+    "requestType": "KeywordsBingKeywordsForKeywordsTaskPostRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "DynamicResult"
+  },
+  "KeywordsBingKeywordsForKeywordsTaskGet": {
+    "path": "/v3/keywords_data/bing/keywords_for_keywords/task_get/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "KeywordsBingKeywordsForKeywordsTaskGetRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingKeywordsForKeywordsTaskGetResultInfo"
+  },
+  "KeywordsBingKeywordsForKeywordsLive": {
+    "path": "/v3/keywords_data/bing/keywords_for_keywords/live",
+    "method": "post",
+    "input": [
+      {
+        "location_name": "United States",
+        "language_name": "English",
+        "keywords": [
+          "average page rpm adsense",
+          "adsense blank ads how long",
+          "leads and prospects"
+        ]
+      }
+    ],
+    "requestType": "KeywordsBingKeywordsForKeywordsLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingKeywordsForKeywordsLiveResultInfo"
+  },
+  "KeywordsBingKeywordPerformanceTaskPost": {
+    "path": "/v3/keywords_data/bing/keyword_performance/task_post",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "language_code": "en",
+        "keywords": [
+          "dataforseo",
+          "seo",
+          "ranking"
+        ]
+      }
+    ],
+    "requestType": "KeywordsBingKeywordPerformanceTaskPostRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "DynamicResult"
+  },
+  "KeywordsBingKeywordPerformanceTaskGet": {
+    "path": "/v3/keywords_data/bing/keyword_performance/task_get/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "KeywordsBingKeywordPerformanceTaskGetRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingKeywordPerformanceTaskGetResultInfo"
+  },
+  "KeywordsBingKeywordPerformanceLive": {
+    "path": "/v3/keywords_data/bing/keyword_performance/live",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "language_code": "en",
+        "keywords": [
+          "dataforseo",
+          "seo",
+          "ranking"
+        ]
+      }
+    ],
+    "requestType": "KeywordsBingKeywordPerformanceLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingKeywordPerformanceLiveResultInfo"
+  },
+  "KeywordsBingSearchVolumeHistoryTaskPost": {
+    "path": "/v3/keywords_data/bing/search_volume_history/task_post",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "language_code": "en",
+        "keywords": [
+          "10 minute timer"
+        ]
+      }
+    ],
+    "requestType": "KeywordsBingSearchVolumeHistoryTaskPostRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "DynamicResult"
+  },
+  "KeywordsBingSearchVolumeHistoryTaskGet": {
+    "path": "/v3/keywords_data/bing/search_volume_history/task_get/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "KeywordsBingSearchVolumeHistoryTaskGetRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingSearchVolumeHistoryTaskGetResultInfo"
+  },
+  "KeywordsBingSearchVolumeHistoryLive": {
+    "path": "/v3/keywords_data/bing/search_volume_history/live",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "language_code": "en",
+        "keywords": [
+          "10 minute timer"
+        ]
+      }
+    ],
+    "requestType": "KeywordsBingSearchVolumeHistoryLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataBingSearchVolumeHistoryLiveResultInfo"
+  },
+  "KeywordsClickstreamDataDataForSEOSearchVolumeLive": {
+    "path": "/v3/keywords_data/clickstream_data/dataforseo_search_volume/live",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "language_code": "en",
+        "tag": "test-tag",
+        "keywords": [
+          "you tube",
+          "youtube",
+          "youtub"
+        ]
+      }
+    ],
+    "requestType": "KeywordsClickstreamDataDataForSEOSearchVolumeLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataClickstreamDataDataForSEOSearchVolumeLiveResultInfo"
+  },
+  "KeywordsClickstreamDataGlobalSearchVolumeLive": {
+    "path": "/v3/keywords_data/clickstream_data/global_search_volume/live",
+    "method": "post",
+    "input": [
+      {
+        "tag": "test-tag",
+        "keywords": [
+          "you tube",
+          "youtube",
+          "youtub"
+        ]
+      }
+    ],
+    "requestType": "KeywordsClickstreamDataGlobalSearchVolumeLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataClickstreamDataGlobalSearchVolumeLiveResultInfo"
+  },
+  "KeywordsClickstreamDataBulkSearchVolumeLive": {
+    "path": "/v3/keywords_data/clickstream_data/bulk_search_volume/live",
+    "method": "post",
+    "input": [
+      {
+        "location_code": 2840,
+        "tag": "test-tag",
+        "keywords": [
+          "you tube",
+          "youtube",
+          "youtub"
+        ]
+      }
+    ],
+    "requestType": "KeywordsClickstreamDataBulkSearchVolumeLiveRequest",
+    "actionType": "KeywordsActions",
+    "resultType": "KeywordsDataClickstreamDataBulkSearchVolumeLiveResultInfo"
+  },
+  "BacklinksIndex": {
+    "path": "/v3/backlinks/index",
+    "method": "get",
+    "input": [],
+    "requestType": "BacklinksIndexRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksIndexResultInfo"
+  },
+  "BacklinksSummaryLive": {
+    "path": "/v3/backlinks/summary/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "explodingtopics.com",
+        "internal_list_limit": 10,
+        "include_subdomains": true,
+        "backlinks_filters": [
+          "dofollow",
+          "=",
+          true
+        ],
+        "backlinks_status_type": "all"
+      }
+    ],
+    "requestType": "BacklinksSummaryLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksSummaryLiveResultInfo"
+  },
+  "BacklinksHistoryLive": {
+    "path": "/v3/backlinks/history/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "cnn.com",
+        "date_from": "2020-01-01",
+        "date_to": "2021-01-01"
+      }
+    ],
+    "requestType": "BacklinksHistoryLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksHistoryLiveResultInfo"
+  },
+  "BacklinksBacklinksLive": {
+    "path": "/v3/backlinks/backlinks/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "forbes.com",
+        "mode": "as_is",
+        "filters": [
+          "dofollow",
+          "=",
+          true
+        ],
+        "limit": 5
+      }
+    ],
+    "requestType": "BacklinksBacklinksLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksBacklinksLiveResultInfo"
+  },
+  "BacklinksAnchorsLive": {
+    "path": "/v3/backlinks/anchors/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "forbes.com",
+        "limit": 4,
+        "order_by": [
+          "backlinks,desc"
+        ],
+        "filters": [
+          "anchor",
+          "like",
+          "%news%"
+        ]
+      }
+    ],
+    "requestType": "BacklinksAnchorsLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksAnchorsLiveResultInfo"
+  },
+  "BacklinksDomainPagesLive": {
+    "path": "/v3/backlinks/domain_pages/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "forbes.com",
+        "limit": 5,
+        "filters": [
+          [
+            "page_summary.backlinks",
+            ">",
+            5
+          ],
+          "and",
+          [
+            "page",
+            "like",
+            "%sites%"
+          ]
+        ]
+      }
+    ],
+    "requestType": "BacklinksDomainPagesLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksDomainPagesLiveResultInfo"
+  },
+  "BacklinksDomainPagesSummaryLive": {
+    "path": "/v3/backlinks/domain_pages_summary/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "forbes.com",
+        "limit": 4,
+        "order_by": [
+          "backlinks,desc"
+        ]
+      }
+    ],
+    "requestType": "BacklinksDomainPagesSummaryLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksDomainPagesSummaryLiveResultInfo"
+  },
+  "BacklinksReferringDomainsLive": {
+    "path": "/v3/backlinks/referring_domains/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "backlinko.com",
+        "limit": 5,
+        "order_by": [
+          "rank,desc"
+        ],
+        "exclude_internal_backlinks": true,
+        "backlinks_filters": [
+          "dofollow",
+          "=",
+          true
+        ],
+        "filters": [
+          "backlinks",
+          ">",
+          100
+        ]
+      }
+    ],
+    "requestType": "BacklinksReferringDomainsLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksReferringDomainsLiveResultInfo"
+  },
+  "BacklinksReferringNetworksLive": {
+    "path": "/v3/backlinks/referring_networks/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "backlinko.com",
+        "network_address_type": "subnet",
+        "limit": 5,
+        "order_by": [
+          "rank,desc"
+        ],
+        "exclude_internal_backlinks": true,
+        "backlinks_filters": [
+          "dofollow",
+          "=",
+          true
+        ],
+        "filters": [
+          "backlinks",
+          ">",
+          100
+        ]
+      }
+    ],
+    "requestType": "BacklinksReferringNetworksLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksReferringNetworksLiveResultInfo"
+  },
+  "BacklinksCompetitorsLive": {
+    "path": "/v3/backlinks/competitors/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "dataforseo.com",
+        "filters": [
+          "rank",
+          ">",
+          100
+        ],
+        "order_by": [
+          "rank,desc"
+        ],
+        "limit": 5
+      }
+    ],
+    "requestType": "BacklinksCompetitorsLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksCompetitorsLiveResultInfo"
+  },
+  "BacklinksDomainIntersectionLive": {
+    "path": "/v3/backlinks/domain_intersection/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": {
+          "1": "moz.com",
+          "2": "ahrefs.com"
+        },
+        "include_subdomains": false,
+        "exclude_targets": [
+          "semrush.com"
+        ],
+        "limit": 5,
+        "order_by": [
+          "1.backlinks,desc"
+        ],
+        "exclude_internal_backlinks": true
+      }
+    ],
+    "requestType": "BacklinksDomainIntersectionLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksDomainIntersectionLiveResultInfo"
+  },
+  "BacklinksPageIntersectionLive": {
+    "path": "/v3/backlinks/page_intersection/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": {
+          "1": "football.com",
+          "2": "fifa.com"
+        },
+        "exclude_targets": [
+          "skysports.com"
+        ],
+        "limit": 5,
+        "order_by": [
+          "1.rank,desc"
+        ],
+        "filters": [
+          [
+            "2.domain_from_rank",
+            ">",
+            400
+          ],
+          "and",
+          [
+            "1.dofollow",
+            "=",
+            true
+          ]
+        ]
+      }
+    ],
+    "requestType": "BacklinksPageIntersectionLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksPageIntersectionLiveResultInfo"
+  },
+  "BacklinksTimeseriesSummaryLive": {
+    "path": "/v3/backlinks/timeseries_summary/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "dataforseo.com",
+        "date_from": "2021-12-01",
+        "date_to": "2022-02-01",
+        "group_range": "month"
+      }
+    ],
+    "requestType": "BacklinksTimeseriesSummaryLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksTimeseriesSummaryLiveResultInfo"
+  },
+  "BacklinksTimeseriesNewLostSummaryLive": {
+    "path": "/v3/backlinks/timeseries_new_lost_summary/live",
+    "method": "post",
+    "input": [
+      {
+        "target": "dataforseo.com",
+        "date_from": "2021-12-01",
+        "date_to": "2022-02-01",
+        "group_range": "month"
+      }
+    ],
+    "requestType": "BacklinksTimeseriesNewLostSummaryLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksTimeseriesNewLostSummaryLiveResultInfo"
+  },
+  "BacklinksBulkRanksLive": {
+    "path": "/v3/backlinks/bulk_ranks/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": [
+          "forbes.com",
+          "cnn.com",
+          "bbc.com",
+          "yelp.com",
+          "https://www.apple.com/iphone/",
+          "https://ahrefs.com/blog/",
+          "ibm.com",
+          "https://variety.com/",
+          "https://stackoverflow.com/",
+          "www.trustpilot.com"
+        ]
+      }
+    ],
+    "requestType": "BacklinksBulkRanksLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksBulkRanksLiveResultInfo"
+  },
+  "BacklinksBulkBacklinksLive": {
+    "path": "/v3/backlinks/bulk_backlinks/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": [
+          "forbes.com",
+          "cnn.com",
+          "bbc.com",
+          "yelp.com",
+          "https://www.apple.com/iphone/",
+          "https://ahrefs.com/blog/",
+          "ibm.com",
+          "https://variety.com/",
+          "https://stackoverflow.com/",
+          "www.trustpilot.com"
+        ]
+      }
+    ],
+    "requestType": "BacklinksBulkBacklinksLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksBulkBacklinksLiveResultInfo"
+  },
+  "BacklinksBulkSpamScoreLive": {
+    "path": "/v3/backlinks/bulk_spam_score/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": [
+          "forbes.com",
+          "cnn.com",
+          "bbc.com",
+          "yelp.com",
+          "https://www.apple.com/iphone/",
+          "https://ahrefs.com/blog/",
+          "ibm.com",
+          "https://variety.com/",
+          "https://stackoverflow.com/",
+          "www.trustpilot.com"
+        ]
+      }
+    ],
+    "requestType": "BacklinksBulkSpamScoreLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksBulkSpamScoreLiveResultInfo"
+  },
+  "BacklinksBulkReferringDomainsLive": {
+    "path": "/v3/backlinks/bulk_referring_domains/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": [
+          "forbes.com",
+          "cnn.com",
+          "bbc.com",
+          "yelp.com",
+          "https://www.apple.com/iphone/",
+          "https://ahrefs.com/blog/",
+          "ibm.com",
+          "https://variety.com/",
+          "https://stackoverflow.com/",
+          "www.trustpilot.com"
+        ]
+      }
+    ],
+    "requestType": "BacklinksBulkReferringDomainsLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksBulkReferringDomainsLiveResultInfo"
+  },
+  "BacklinksBulkNewLostBacklinksLive": {
+    "path": "/v3/backlinks/bulk_new_lost_backlinks/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": [
+          "forbes.com",
+          "cnn.com",
+          "bbc.com",
+          "yelp.com",
+          "https://www.apple.com/iphone/",
+          "https://ahrefs.com/blog/",
+          "ibm.com",
+          "https://variety.com/",
+          "https://stackoverflow.com/",
+          "www.trustpilot.com"
+        ],
+        "date_from": "2026-10-14 16:19:26"
+      }
+    ],
+    "requestType": "BacklinksBulkNewLostBacklinksLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksBulkNewLostBacklinksLiveResultInfo"
+  },
+  "BacklinksBulkNewLostReferringDomainsLive": {
+    "path": "/v3/backlinks/bulk_new_lost_referring_domains/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": [
+          "forbes.com",
+          "cnn.com",
+          "bbc.com",
+          "yelp.com",
+          "https://www.apple.com/iphone/",
+          "https://ahrefs.com/blog/",
+          "ibm.com",
+          "https://variety.com/",
+          "https://stackoverflow.com/",
+          "www.trustpilot.com"
+        ],
+        "datetime_from": "2026-19-14"
+      }
+    ],
+    "requestType": "BacklinksBulkNewLostReferringDomainsLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksBulkNewLostReferringDomainsLiveResultInfo"
+  },
+  "BacklinksBulkPagesSummaryLive": {
+    "path": "/v3/backlinks/bulk_pages_summary/live",
+    "method": "post",
+    "input": [
+      {
+        "targets": [
+          "https://dataforseo.com/solutions",
+          "https://dataforseo.com/about-us"
+        ]
+      }
+    ],
+    "requestType": "BacklinksBulkPagesSummaryLiveRequest",
+    "actionType": "BacklinksActions",
+    "resultType": "BacklinksBulkPagesSummaryLiveResultInfo"
+  },
+  "AiVisibilityChatGptLlmScraperTaskPost": {
+    "path": "/v3/ai_optimization/chat_gpt/llm_scraper/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "what is chatgpt"
+      }
+    ],
+    "requestType": "AiVisibilityChatGptLlmScraperTaskPostRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "DynamicResult"
+  },
+  "AiVisibilityChatGptLlmScraperTaskGetAdvanced": {
+    "path": "/v3/ai_optimization/chat_gpt/llm_scraper/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "AiVisibilityChatGptLlmScraperTaskGetAdvancedRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationChatGptLlmScraperTaskGetAdvancedResultInfo"
+  },
+  "AiVisibilityChatGptLlmScraperTaskGetHtml": {
+    "path": "/v3/ai_optimization/chat_gpt/llm_scraper/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "AiVisibilityChatGptLlmScraperTaskGetHtmlRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationChatGptLlmScraperTaskGetHtmlResultInfo"
+  },
+  "AiVisibilityChatGptLlmScraperLiveAdvanced": {
+    "path": "/v3/ai_optimization/chat_gpt/llm_scraper/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "AiVisibilityChatGptLlmScraperLiveAdvancedRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationChatGptLlmScraperLiveAdvancedResultInfo"
+  },
+  "AiVisibilityChatGptLlmScraperLiveHtml": {
+    "path": "/v3/ai_optimization/chat_gpt/llm_scraper/live/html",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "AiVisibilityChatGptLlmScraperLiveHtmlRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationChatGptLlmScraperLiveHtmlResultInfo"
+  },
+  "AiVisibilityGeminiLlmScraperTaskPost": {
+    "path": "/v3/ai_optimization/gemini/llm_scraper/task_post",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "AiVisibilityGeminiLlmScraperTaskPostRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "DynamicResult"
+  },
+  "AiVisibilityGeminiLlmScraperTaskGetAdvanced": {
+    "path": "/v3/ai_optimization/gemini/llm_scraper/task_get/advanced/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "AiVisibilityGeminiLlmScraperTaskGetAdvancedRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationGeminiLlmScraperTaskGetAdvancedResultInfo"
+  },
+  "AiVisibilityGeminiLlmScraperTaskGetHtml": {
+    "path": "/v3/ai_optimization/gemini/llm_scraper/task_get/html/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "AiVisibilityGeminiLlmScraperTaskGetHtmlRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationGeminiLlmScraperTaskGetHtmlResultInfo"
+  },
+  "AiVisibilityGeminiLlmScraperLiveAdvanced": {
+    "path": "/v3/ai_optimization/gemini/llm_scraper/live/advanced",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "AiVisibilityGeminiLlmScraperLiveAdvancedRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationGeminiLlmScraperLiveAdvancedResultInfo"
+  },
+  "AiVisibilityGeminiLlmScraperLiveHtml": {
+    "path": "/v3/ai_optimization/gemini/llm_scraper/live/html",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein"
+      }
+    ],
+    "requestType": "AiVisibilityGeminiLlmScraperLiveHtmlRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationGeminiLlmScraperLiveHtmlResultInfo"
+  },
+  "AiVisibilityAiKeywordDataKeywordsSearchVolumeLive": {
+    "path": "/v3/ai_optimization/ai_keyword_data/keywords_search_volume/live",
+    "method": "post",
+    "input": [
+      {
+        "language_name": "English",
+        "location_code": 2840,
+        "keywords": [
+          "iphone",
+          "seo"
+        ]
+      }
+    ],
+    "requestType": "AiVisibilityAiKeywordDataKeywordsSearchVolumeLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationAiKeywordDataKeywordsSearchVolumeLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsSearchMentionsLive": {
+    "path": "/v3/ai_optimization/llm_mentions/search_mentions/live",
+    "method": "post",
+    "input": [
+      {
+        "language_name": "English",
+        "location_code": 2840,
+        "target": [
+          {
+            "domain": "dataforseo.com",
+            "search_filter": "exclude"
+          },
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          }
+        ],
+        "platform": "google",
+        "filters": [
+          [
+            "ai_search_volume",
+            ">",
+            1000
+          ]
+        ],
+        "order_by": [
+          "ai_search_volume,desc"
+        ],
+        "offset": 0,
+        "limit": 3
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsSearchMentionsLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsSearchMentionsLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTargetMetricsLive": {
+    "path": "/v3/ai_optimization/llm_mentions/target_metrics/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "chat_gpt",
+        "target": [
+          {
+            "domain": "en.wikipedia.org",
+            "search_filter": "exclude"
+          },
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          }
+        ],
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "internal_list_limit": 10
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTargetMetricsLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTargetMetricsLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsMultiTargetMetricsLive": {
+    "path": "/v3/ai_optimization/llm_mentions/multi_target_metrics/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "google",
+        "targets": [
+          {
+            "key": "chat_gpt",
+            "target": [
+              {
+                "keyword": "chat gpt"
+              }
+            ]
+          },
+          {
+            "key": "claude",
+            "target": [
+              {
+                "keyword": "claude"
+              }
+            ]
+          },
+          {
+            "key": "gemini",
+            "target": [
+              {
+                "keyword": "gemini"
+              }
+            ]
+          },
+          {
+            "key": "perplexity",
+            "target": [
+              {
+                "keyword": "perplexity",
+                "search_filter": "include"
+              }
+            ]
+          }
+        ],
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "internal_list_limit": 5
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsMultiTargetMetricsLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsMultiTargetMetricsLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTopMentionedDomainsLive": {
+    "path": "/v3/ai_optimization/llm_mentions/top_mentioned_domains/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "chat_gpt",
+        "target": [
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          },
+          {
+            "keyword": "auto",
+            "search_scope": [
+              "question"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "links_scope": "sources",
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "limit": 3,
+        "internal_list_limit": 2
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTopMentionedDomainsLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTopMentionedDomainsLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTopMentionedPagesLive": {
+    "path": "/v3/ai_optimization/llm_mentions/top_mentioned_pages/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "chat_gpt",
+        "target": [
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          },
+          {
+            "keyword": "auto",
+            "search_scope": [
+              "question"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "links_scope": "sources",
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "limit": 3,
+        "internal_list_limit": 2
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTopMentionedPagesLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTopMentionedPagesLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTopMentionedBrandsLive": {
+    "path": "/v3/ai_optimization/llm_mentions/top_mentioned_brands/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "chat_gpt",
+        "target": [
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          },
+          {
+            "keyword": "auto",
+            "search_scope": [
+              "question"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "limit": 3,
+        "internal_list_limit": 2
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTopMentionedBrandsLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTopMentionedBrandsLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTopMentionedBrandCategoriesLive": {
+    "path": "/v3/ai_optimization/llm_mentions/top_mentioned_brand_categories/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "chat_gpt",
+        "target": [
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          },
+          {
+            "keyword": "auto",
+            "search_scope": [
+              "question"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "limit": 3,
+        "internal_list_limit": 2
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTopMentionedBrandCategoriesLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTopMentionedBrandCategoriesLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTargetMetricsLiteLive": {
+    "path": "/v3/ai_optimization/llm_mentions/target_metrics_lite/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "es",
+        "location_code": 2840,
+        "platform": "google",
+        "target": [
+          {
+            "domain": "en.wikipedia.org",
+            "search_filter": "exclude"
+          },
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          }
+        ],
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "limit": 6
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTargetMetricsLiteLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTargetMetricsLiteLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTopMentionedDomainsLiteLive": {
+    "path": "/v3/ai_optimization/llm_mentions/top_mentioned_domains_lite/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "chat_gpt",
+        "target": [
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          },
+          {
+            "keyword": "auto",
+            "search_scope": [
+              "question"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "links_scope": "sources",
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "limit": 3,
+        "internal_list_limit": 2
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTopMentionedDomainsLiteLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTopMentionedDomainsLiteLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTopMentionedPagesLiteLive": {
+    "path": "/v3/ai_optimization/llm_mentions/top_mentioned_pages_lite/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "chat_gpt",
+        "target": [
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          },
+          {
+            "keyword": "auto",
+            "search_scope": [
+              "question"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "links_scope": "sources",
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "limit": 3,
+        "internal_list_limit": 2
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTopMentionedPagesLiteLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTopMentionedPagesLiteLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTopMentionedBrandsLiteLive": {
+    "path": "/v3/ai_optimization/llm_mentions/top_mentioned_brands_lite/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "chat_gpt",
+        "target": [
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          },
+          {
+            "keyword": "auto",
+            "search_scope": [
+              "question"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "limit": 3,
+        "internal_list_limit": 2
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTopMentionedBrandsLiteLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTopMentionedBrandsLiteLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTopMentionedBrandCategoriesLiteLive": {
+    "path": "/v3/ai_optimization/llm_mentions/top_mentioned_brand_categories_lite/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "en",
+        "location_code": 2840,
+        "platform": "chat_gpt",
+        "target": [
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          },
+          {
+            "keyword": "auto",
+            "search_scope": [
+              "question"
+            ],
+            "match_type": "partial_match"
+          }
+        ],
+        "initial_dataset_filters": [
+          [
+            "ai_search_volume",
+            ">",
+            10
+          ]
+        ],
+        "limit": 3,
+        "internal_list_limit": 2
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTopMentionedBrandCategoriesLiteLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTopMentionedBrandCategoriesLiteLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsHistoricalLive": {
+    "path": "/v3/ai_optimization/llm_mentions/historical/live",
+    "method": "post",
+    "input": [
+      {
+        "language_code": "es",
+        "location_code": 2840,
+        "platform": "google",
+        "target": [
+          {
+            "domain": "en.wikipedia.org",
+            "search_filter": "exclude"
+          },
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          }
+        ]
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsHistoricalLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsHistoricalLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTimeseriesDeltaLive": {
+    "path": "/v3/ai_optimization/llm_mentions/timeseries_delta/live",
+    "method": "post",
+    "input": [
+      {
+        "language_name": "English",
+        "location_code": 2840,
+        "target": [
+          {
+            "domain": "dataforseo.com",
+            "search_filter": "exclude"
+          },
+          {
+            "keyword": "bmw",
+            "search_scope": [
+              "answer"
+            ]
+          }
+        ],
+        "platform": "google",
+        "date_from": "2025-08-01",
+        "date_to": "2025-12-01",
+        "group_range": "month"
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTimeseriesDeltaLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTimeseriesDeltaLiveResultInfo"
+  },
+  "AiVisibilityLlmMentionsTimeseriesNewLostLive": {
+    "path": "/v3/ai_optimization/llm_mentions/timeseries_new_lost/live",
+    "method": "post",
+    "input": [
+      {
+        "language_name": "English",
+        "location_code": 2840,
+        "target": [
+          {
+            "domain": "dataforseo.com",
+            "search_filter": "exclude"
+          },
+          {
+            "keyword": "serp",
+            "search_scope": [
+              "answer"
+            ]
+          }
+        ],
+        "platform": "google",
+        "date_from": "2025-08-01",
+        "date_to": "2025-12-01",
+        "group_range": "month"
+      }
+    ],
+    "requestType": "AiVisibilityLlmMentionsTimeseriesNewLostLiveRequest",
+    "actionType": "AiVisibilityActions",
+    "resultType": "AiOptimizationLlmMentionsTimeseriesNewLostLiveResultInfo"
+  },
+  "AuditsForceStop": {
+    "path": "/v3/on_page/force_stop",
+    "method": "post",
+    "input": [
+      {},
+      {}
+    ],
+    "requestType": "AuditsForceStopRequest",
+    "actionType": "AuditsActions",
+    "resultType": "DynamicResult"
+  },
+  "AuditsTaskPost": {
+    "path": "/v3/on_page/task_post",
+    "method": "post",
+    "input": [
+      {
+        "target": "example.com",
+        "max_crawl_pages": 1,
+        "load_resources": true,
+        "enable_javascript": true,
+        "custom_js": "meta = {}; meta.url = document.URL; meta;",
+        "tag": "some_string_123"
+      }
+    ],
+    "requestType": "AuditsTaskPostRequest",
+    "actionType": "AuditsActions",
+    "resultType": "DynamicResult"
+  },
+  "AuditsSummary": {
+    "path": "/v3/on_page/summary/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "AuditsSummaryRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageSummaryResultInfo"
+  },
+  "AuditsPages": {
+    "path": "/v3/on_page/pages",
+    "method": "post",
+    "input": [
+      {
+        "filters": [
+          [
+            "resource_type",
+            "=",
+            "html"
+          ],
+          "and",
+          [
+            "meta.scripts_count",
+            ">",
+            40
+          ]
+        ],
+        "order_by": [
+          "meta.content.plain_text_word_count,desc"
+        ],
+        "limit": 10
+      }
+    ],
+    "requestType": "AuditsPagesRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPagePagesResultInfo"
+  },
+  "AuditsPagesByResource": {
+    "path": "/v3/on_page/pages_by_resource",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://www.etsy.com/about/jobs.workco2018.js?"
+      }
+    ],
+    "requestType": "AuditsPagesByResourceRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPagePagesByResourceResultInfo"
+  },
+  "AuditsResources": {
+    "path": "/v3/on_page/resources",
+    "method": "post",
+    "input": [
+      {
+        "filters": [
+          [
+            "resource_type",
+            "=",
+            "image"
+          ],
+          "and",
+          [
+            "size",
+            ">",
+            100000
+          ]
+        ],
+        "order_by": [
+          "size,desc"
+        ],
+        "limit": 10
+      }
+    ],
+    "requestType": "AuditsResourcesRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageResourcesResultInfo"
+  },
+  "AuditsDuplicateTags": {
+    "path": "/v3/on_page/duplicate_tags",
+    "method": "post",
+    "input": [
+      {
+        "type": "duplicate_description",
+        "limit": 10
+      }
+    ],
+    "requestType": "AuditsDuplicateTagsRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageDuplicateTagsResultInfo"
+  },
+  "AuditsDuplicateContent": {
+    "path": "/v3/on_page/duplicate_content",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://www.etsy.com/"
+      }
+    ],
+    "requestType": "AuditsDuplicateContentRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageDuplicateContentResultInfo"
+  },
+  "AuditsLinks": {
+    "path": "/v3/on_page/links",
+    "method": "post",
+    "input": [
+      {
+        "page_from": "/apis/google-trends-api",
+        "filters": [
+          [
+            "dofollow",
+            "=",
+            true
+          ],
+          "and",
+          [
+            "direction",
+            "=",
+            "external"
+          ]
+        ],
+        "limit": 10
+      }
+    ],
+    "requestType": "AuditsLinksRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageLinksResultInfo"
+  },
+  "AuditsRedirectChains": {
+    "path": "/v3/on_page/redirect_chains",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://test_rdr.dataforseo.com/a/"
+      }
+    ],
+    "requestType": "AuditsRedirectChainsRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageRedirectChainsResultInfo"
+  },
+  "AuditsNonIndexable": {
+    "path": "/v3/on_page/non_indexable",
+    "method": "post",
+    "input": [
+      {
+        "filters": [
+          [
+            "reason",
+            "=",
+            "robots_txt"
+          ],
+          "and",
+          [
+            "url",
+            "like",
+            "%go%"
+          ]
+        ],
+        "limit": 10
+      }
+    ],
+    "requestType": "AuditsNonIndexableRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageNonIndexableResultInfo"
+  },
+  "AuditsWaterfall": {
+    "path": "/v3/on_page/waterfall",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com/tag/broken-links"
+      }
+    ],
+    "requestType": "AuditsWaterfallRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageWaterfallResultInfo"
+  },
+  "AuditsKeywordDensity": {
+    "path": "/v3/on_page/keyword_density",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com/",
+        "keyword_length": 2,
+        "filters": [
+          "frequency",
+          ">",
+          5
+        ]
+      }
+    ],
+    "requestType": "AuditsKeywordDensityRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageKeywordDensityResultInfo"
+  },
+  "AuditsMicrodata": {
+    "path": "/v3/on_page/microdata",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com/apis"
+      }
+    ],
+    "requestType": "AuditsMicrodataRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageMicrodataResultInfo"
+  },
+  "AuditsUncrawlableResources": {
+    "path": "/v3/on_page/uncrawlable_resources",
+    "method": "post",
+    "input": [
+      {
+        "filters": [
+          [
+            "meta.content_type",
+            "=",
+            "image/jpeg"
+          ],
+          "and",
+          [
+            "url",
+            "like",
+            "%go%"
+          ]
+        ],
+        "limit": 10
+      }
+    ],
+    "requestType": "AuditsUncrawlableResourcesRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageUncrawlableResourcesResultInfo"
+  },
+  "AuditsRawHtml": {
+    "path": "/v3/on_page/raw_html",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com/apis"
+      }
+    ],
+    "requestType": "AuditsRawHtmlRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageRawHtmlResultInfo"
+  },
+  "AuditsPageScreenshot": {
+    "path": "/v3/on_page/page_screenshot",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com/apis"
+      }
+    ],
+    "requestType": "AuditsPageScreenshotRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPagePageScreenshotResultInfo"
+  },
+  "AuditsContentParsing": {
+    "path": "/v3/on_page/content_parsing",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com/blog/a-versatile-alternative-to-google-trends-exploring-the-power-of-dataforseo-trends-api"
+      }
+    ],
+    "requestType": "AuditsContentParsingRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageContentParsingResultInfo"
+  },
+  "AuditsContentParsingLive": {
+    "path": "/v3/on_page/content_parsing/live",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com/blog/a-versatile-alternative-to-google-trends-exploring-the-power-of-dataforseo-trends-api"
+      }
+    ],
+    "requestType": "AuditsContentParsingLiveRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageContentParsingLiveResultInfo"
+  },
+  "AuditsInstantPages": {
+    "path": "/v3/on_page/instant_pages",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com/blog",
+        "enable_javascript": true,
+        "custom_js": "meta = {}; meta.url = document.URL; meta;"
+      }
+    ],
+    "requestType": "AuditsInstantPagesRequest",
+    "actionType": "AuditsActions",
+    "resultType": "OnPageInstantPagesResultInfo"
+  },
+  "AuditsLighthouseTaskPost": {
+    "path": "/v3/on_page/lighthouse/task_post",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com",
+        "for_mobile": true,
+        "tag": "some_string_123"
+      }
+    ],
+    "requestType": "AuditsLighthouseTaskPostRequest",
+    "actionType": "AuditsActions",
+    "resultType": "DynamicResult"
+  },
+  "AuditsLighthouseTaskGetJson": {
+    "path": "/v3/on_page/lighthouse/task_get/json/{id}",
+    "method": "get",
+    "input": [],
+    "requestType": "AuditsLighthouseTaskGetJsonRequest",
+    "actionType": "AuditsActions",
+    "resultType": "DynamicResult"
+  },
+  "AuditsLighthouseLiveJson": {
+    "path": "/v3/on_page/lighthouse/live/json",
+    "method": "post",
+    "input": [
+      {
+        "url": "https://dataforseo.com",
+        "for_mobile": true,
+        "tag": "some_string_123"
+      }
+    ],
+    "requestType": "AuditsLighthouseLiveJsonRequest",
+    "actionType": "AuditsActions",
+    "resultType": "DynamicResult"
+  },
+  "ContentSearchLive": {
+    "path": "/v3/content_analysis/search/live",
+    "method": "post",
+    "input": [
+      {
+        "keyword_fields": {
+          "snippet": "logitech"
+        },
+        "keyword": "logitech",
+        "page_type": [
+          "ecommerce",
+          "news",
+          "blogs",
+          "message-boards",
+          "organization"
+        ],
+        "search_mode": "as_is",
+        "filters": [
+          "main_domain",
+          "=",
+          "reviewfinder.ca"
+        ],
+        "order_by": [
+          "content_info.sentiment_connotations.anger,desc"
+        ],
+        "limit": 10
+      }
+    ],
+    "requestType": "ContentSearchLiveRequest",
+    "actionType": "ContentActions",
+    "resultType": "ContentAnalysisSearchLiveResultInfo"
+  },
+  "ContentContentAnalysisSummaryLive": {
+    "path": "/v3/content_analysis/summary/live",
+    "method": "post",
+    "input": [
+      {
+        "keyword": "logitech",
+        "page_type": [
+          "ecommerce",
+          "news",
+          "blogs",
+          "message-boards",
+          "organization"
+        ],
+        "internal_list_limit": 8,
+        "positive_connotation_threshold": 0.5
+      }
+    ],
+    "requestType": "ContentContentAnalysisSummaryLiveRequest",
+    "actionType": "ContentActions",
+    "resultType": "ContentAnalysisSummaryInfo"
+  },
+  "ContentSentimentAnalysisLive": {
+    "path": "/v3/content_analysis/sentiment_analysis/live",
+    "method": "post",
+    "input": [
+      {
+        "keyword": "logitech",
+        "internal_list_limit": 1
+      }
+    ],
+    "requestType": "ContentSentimentAnalysisLiveRequest",
+    "actionType": "ContentActions",
+    "resultType": "ContentAnalysisSentimentAnalysisLiveResultInfo"
+  },
+  "ContentRatingDistributionLive": {
+    "path": "/v3/content_analysis/rating_distribution/live",
+    "method": "post",
+    "input": [
+      {
+        "keyword": "logitech",
+        "search_mode": "as_is",
+        "internal_list_limit": 10
+      }
+    ],
+    "requestType": "ContentRatingDistributionLiveRequest",
+    "actionType": "ContentActions",
+    "resultType": "ContentAnalysisRatingDistributionLiveResultInfo"
+  },
+  "ContentPhraseTrendsLive": {
+    "path": "/v3/content_analysis/phrase_trends/live",
+    "method": "post",
+    "input": [
+      {
+        "keyword": "logitech",
+        "search_mode": "as_is",
+        "date_from": "2022-09-01",
+        "date_group": "month"
+      }
+    ],
+    "requestType": "ContentPhraseTrendsLiveRequest",
+    "actionType": "ContentActions",
+    "resultType": "ContentAnalysisPhraseTrendsLiveResultInfo"
+  },
+  "ContentCategoryTrendsLive": {
+    "path": "/v3/content_analysis/category_trends/live",
+    "method": "post",
+    "input": [
+      {
+        "category_code": 10994,
+        "search_mode": "as_is",
+        "date_from": "2022-09-01",
+        "date_group": "month"
+      }
+    ],
+    "requestType": "ContentCategoryTrendsLiveRequest",
+    "actionType": "ContentActions",
+    "resultType": "ContentAnalysisCategoryTrendsLiveResultInfo"
+  },
+  "AccountUserData": {
+    "path": "/v3/appendix/user_data",
+    "method": "get",
+    "input": [],
+    "requestType": "AccountUserDataRequest",
+    "actionType": "AccountActions",
+    "resultType": "AppendixUserDataResultInfo"
+  }
+}
