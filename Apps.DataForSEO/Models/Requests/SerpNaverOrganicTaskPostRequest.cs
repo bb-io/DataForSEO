@@ -55,7 +55,7 @@ public class SerpNaverOrganicTaskPostRequest
     [Display("Postback data", Description = "postback_url datatype required field if you specify postback_url corresponds to the function you used for setting a task possible values: regular , advanced , html")]
     [JsonProperty("postback_data")]
     [Blackbird.Applications.Sdk.Common.Dictionaries.StaticDataSource(typeof(Apps.DataForSEO.Handlers.Static.PostbackDataOptions3))]
-    public string PostbackData { get; set; } = string.Empty;
+    public string? PostbackData { get; set; }
 
     [Display("Pingback URL", Description = "notification URL of a completed task optional field when a task is completed we will notify you by GET request sent to the URL you have specified you can use the \u2018$id\u2019 string as a $id variable and \u2018$tag\u2019 as urlencoded $tag variable. We will set the necessary values before sending the request. example: http://your-server.com/pingscript?id=")]
     [JsonProperty("pingback_url")]

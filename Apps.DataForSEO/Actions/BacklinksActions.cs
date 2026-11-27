@@ -14,7 +14,7 @@ namespace Apps.DataForSEO.Actions;
 [ActionList("Backlinks")]
 public class BacklinksActions(InvocationContext context, IFileManagementClient fileManagementClient) : Invocable(context)
 {
-    [Action("Get backlink index", Description = "\u200c This endpoint will provide you with the total number of backlinks, domains, and pages our database contains for the moment when you make a request. You will also get stats for the last 12 months.")]
+    [Action("Get backlink index", Description = "This endpoint will provide you with the total number of backlinks, domains, and pages our database contains for the moment when you make a request. You will also get stats for the last 12 months.")]
     public async Task<ReportResponse<BacklinksIndexResultInfo>> BacklinksIndex([ActionParameter] BacklinksIndexRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -24,7 +24,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksIndexResultInfo>(fileManagementClient, [response], "BacklinksIndex", false);
     }
 
-    [Action("Get backlink summary", Description = "\u200c This endpoint will provide you with an overview of backlinks data available for a given domain, subdomain, or webpage.")]
+    [Action("Get backlink summary", Description = "This endpoint will provide you with an overview of backlinks data available for a given domain, subdomain, or webpage.")]
     public async Task<ReportResponse<BacklinksSummaryLiveResultInfo>> BacklinksSummaryLive([ActionParameter] BacklinksSummaryLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -52,7 +52,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksSummaryLiveResultInfo>(fileManagementClient, [response], "BacklinksSummaryLive", false);
     }
 
-    [Action("Get backlink history", Description = "\u200c This endpoint will provide you with historical backlinks data back to the beginning of 2019. You can receive the number of backlinks a given domain had in a specific time period, the number of new & lost backlinks, ref")]
+    [Action("Get backlink history", Description = "This endpoint will provide you with historical backlinks data back to the beginning of 2019. You can receive the number of backlinks a given domain had in a specific time period, the number of new & lost backlinks, ref")]
     public async Task<ReportResponse<BacklinksHistoryLiveResultInfo>> BacklinksHistoryLive([ActionParameter] BacklinksHistoryLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -72,7 +72,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksHistoryLiveResultInfo>(fileManagementClient, [response], "BacklinksHistoryLive", false);
     }
 
-    [Action("Search backlinks", Description = "\u200c This endpoint will provide you with a list of backlinks and relevant data for the specified domain, subdomain, or webpage.")]
+    [Action("Search backlinks", Description = "This endpoint will provide you with a list of backlinks and relevant data for the specified domain, subdomain, or webpage.")]
     public async Task<ReportResponse<BacklinksBacklinksLiveResultInfo>> BacklinksBacklinksLive([ActionParameter] BacklinksBacklinksLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -109,7 +109,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksBacklinksLiveResultInfo>(fileManagementClient, responses, "BacklinksBacklinksLive", true);
     }
 
-    [Action("Search backlink anchors", Description = "\u200c\u200c This endpoint will provide you with a detailed overview of anchors used when linking to the specified website with relevant backlink data for each of them.")]
+    [Action("Search backlink anchors", Description = "This endpoint will provide you with a detailed overview of anchors used when linking to the specified website with relevant backlink data for each of them.")]
     public async Task<ReportResponse<BacklinksAnchorsLiveResultInfo>> BacklinksAnchorsLive([ActionParameter] BacklinksAnchorsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -145,7 +145,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksAnchorsLiveResultInfo>(fileManagementClient, responses, "BacklinksAnchorsLive", true);
     }
 
-    [Action("Search backlink domain pages", Description = "\u200c\u200c This endpoint will provide you with a detailed overview of domain pages with backlink data for each page.")]
+    [Action("Search backlink domain pages", Description = "This endpoint will provide you with a detailed overview of domain pages with backlink data for each page.")]
     public async Task<ReportResponse<BacklinksDomainPagesLiveResultInfo>> BacklinksDomainPagesLive([ActionParameter] BacklinksDomainPagesLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -215,7 +215,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksDomainPagesSummaryLiveResultInfo>(fileManagementClient, responses, "BacklinksDomainPagesSummaryLive", true);
     }
 
-    [Action("Search backlink referring domains", Description = "\u200c\u200c This endpoint will provide you with a detailed overview of referring domains pointing to the target you specify.")]
+    [Action("Search backlink referring domains", Description = "This endpoint will provide you with a detailed overview of referring domains pointing to the target you specify.")]
     public async Task<ReportResponse<BacklinksReferringDomainsLiveResultInfo>> BacklinksReferringDomainsLive([ActionParameter] BacklinksReferringDomainsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -251,7 +251,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksReferringDomainsLiveResultInfo>(fileManagementClient, responses, "BacklinksReferringDomainsLive", true);
     }
 
-    [Action("Get backlink referring networks", Description = "\u200c\u200c This endpoint will provide you with a detailed overview of referring IPs and subnets pointing to the target you specify.")]
+    [Action("Get backlink referring networks", Description = "This endpoint will provide you with a detailed overview of referring IPs and subnets pointing to the target you specify.")]
     public async Task<ReportResponse<BacklinksReferringNetworksLiveResultInfo>> BacklinksReferringNetworksLive([ActionParameter] BacklinksReferringNetworksLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -289,7 +289,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksReferringNetworksLiveResultInfo>(fileManagementClient, responses, "BacklinksReferringNetworksLive", true);
     }
 
-    [Action("Search backlink competitors", Description = "\u200c\u200c This endpoint will provide you with a list of competitors that share some part of the backlink profile with a target website, along with a number of backlink intersections and the rank of every competing website.")]
+    [Action("Search backlink competitors", Description = "This endpoint will provide you with a list of competitors that share some part of the backlink profile with a target website, along with a number of backlink intersections and the rank of every competing website.")]
     public async Task<ReportResponse<BacklinksCompetitorsLiveResultInfo>> BacklinksCompetitorsLive([ActionParameter] BacklinksCompetitorsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -319,7 +319,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksCompetitorsLiveResultInfo>(fileManagementClient, responses, "BacklinksCompetitorsLive", true);
     }
 
-    [Action("Get backlink domain intersection", Description = "\u200c This endpoint will provide you with the list of domains pointing to the specified websites. This endpoint is especially useful for creating a Link Gap feature that shows what domains link to your competitors but do not")]
+    [Action("Get backlink domain intersection", Description = "This endpoint will provide you with the list of domains pointing to the specified websites. This endpoint is especially useful for creating a Link Gap feature that shows what domains link to your competitors but do not")]
     public async Task<ReportResponse<BacklinksDomainIntersectionLiveResultInfo>> BacklinksDomainIntersectionLive([ActionParameter] BacklinksDomainIntersectionLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -359,7 +359,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksDomainIntersectionLiveResultInfo>(fileManagementClient, responses, "BacklinksDomainIntersectionLive", true);
     }
 
-    [Action("Get backlink page intersection", Description = "\u200c This endpoint will provide you with the list of referring pages pointing to the specified targets. It is especially useful for finding the backlinks that point to your competitors but don\u2019t point to your website.")]
+    [Action("Get backlink page intersection", Description = "This endpoint will provide you with the list of referring pages pointing to the specified targets. It is especially useful for finding the backlinks that point to your competitors but don\u2019t point to your website.")]
     public async Task<ReportResponse<BacklinksPageIntersectionLiveResultInfo>> BacklinksPageIntersectionLive([ActionParameter] BacklinksPageIntersectionLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -397,7 +397,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksPageIntersectionLiveResultInfo>(fileManagementClient, responses, "BacklinksPageIntersectionLive", true);
     }
 
-    [Action("Get backlink timeseries summary", Description = "\u200c This endpoint will provide you with an overview of backlink data for the target domain available during a period between the two indicated dates. Backlink metrics will be grouped by the time range that you define: day,")]
+    [Action("Get backlink timeseries summary", Description = "This endpoint will provide you with an overview of backlink data for the target domain available during a period between the two indicated dates. Backlink metrics will be grouped by the time range that you define: day,")]
     public async Task<ReportResponse<BacklinksTimeseriesSummaryLiveResultInfo>> BacklinksTimeseriesSummaryLive([ActionParameter] BacklinksTimeseriesSummaryLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -421,7 +421,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksTimeseriesSummaryLiveResultInfo>(fileManagementClient, [response], "BacklinksTimeseriesSummaryLive", false);
     }
 
-    [Action("Get backlink timeseries new lost summary", Description = "\u200c This endpoint will provide you with the number of new and lost backlinks and referring domains for the domain specified in the target field.")]
+    [Action("Get backlink timeseries new lost summary", Description = "This endpoint will provide you with the number of new and lost backlinks and referring domains for the domain specified in the target field.")]
     public async Task<ReportResponse<BacklinksTimeseriesNewLostSummaryLiveResultInfo>> BacklinksTimeseriesNewLostSummaryLive([ActionParameter] BacklinksTimeseriesNewLostSummaryLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -443,7 +443,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksTimeseriesNewLostSummaryLiveResultInfo>(fileManagementClient, [response], "BacklinksTimeseriesNewLostSummaryLive", false);
     }
 
-    [Action("Get backlink bulk ranks", Description = "\u200c This endpoint will provide you with rank scores of the domains, subdomains, and pages specified in the targets array. The score is based on the number of referring domains pointing to the specified domains, subdomains,")]
+    [Action("Get backlink bulk ranks", Description = "This endpoint will provide you with rank scores of the domains, subdomains, and pages specified in the targets array. The score is based on the number of referring domains pointing to the specified domains, subdomains,")]
     public async Task<ReportResponse<BacklinksBulkRanksLiveResultInfo>> BacklinksBulkRanksLive([ActionParameter] BacklinksBulkRanksLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -466,7 +466,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksBulkRanksLiveResultInfo>(fileManagementClient, [response], "BacklinksBulkRanksLive", false);
     }
 
-    [Action("Search backlink bulk backlinks", Description = "\u200c This endpoint will provide you with the number of backlinks pointing to domains, subdomains, and pages specified in the targets array. The returned numbers correspond to all live backlinks, that is, total number of ref")]
+    [Action("Search backlink bulk backlinks", Description = "This endpoint will provide you with the number of backlinks pointing to domains, subdomains, and pages specified in the targets array. The returned numbers correspond to all live backlinks, that is, total number of ref")]
     public async Task<ReportResponse<BacklinksBulkBacklinksLiveResultInfo>> BacklinksBulkBacklinksLive([ActionParameter] BacklinksBulkBacklinksLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -487,7 +487,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksBulkBacklinksLiveResultInfo>(fileManagementClient, [response], "BacklinksBulkBacklinksLive", false);
     }
 
-    [Action("Get backlink bulk spam score", Description = "\u200c This endpoint will provide you with spam scores of the domains, subdomains, and pages you specified in the targets array. Spam Score is the provider\u2019s proprietary metric that indicates how \u201cspammy\u201d your target is on a sc")]
+    [Action("Get backlink bulk spam score", Description = "This endpoint will provide you with spam scores of the domains, subdomains, and pages you specified in the targets array. Spam Score is the provider\u2019s proprietary metric that indicates how \u201cspammy\u201d your target is on a sc")]
     public async Task<ReportResponse<BacklinksBulkSpamScoreLiveResultInfo>> BacklinksBulkSpamScoreLive([ActionParameter] BacklinksBulkSpamScoreLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -508,7 +508,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksBulkSpamScoreLiveResultInfo>(fileManagementClient, [response], "BacklinksBulkSpamScoreLive", false);
     }
 
-    [Action("Search backlink bulk referring domains", Description = "\u200c This endpoint will provide you with the number of referring domains pointing to domains, subdomains, and pages specified in the targets array. The returned numbers are based on all live referring domains, that is, tota")]
+    [Action("Search backlink bulk referring domains", Description = "This endpoint will provide you with the number of referring domains pointing to domains, subdomains, and pages specified in the targets array. The returned numbers are based on all live referring domains, that is, tota")]
     public async Task<ReportResponse<BacklinksBulkReferringDomainsLiveResultInfo>> BacklinksBulkReferringDomainsLive([ActionParameter] BacklinksBulkReferringDomainsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -529,7 +529,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksBulkReferringDomainsLiveResultInfo>(fileManagementClient, [response], "BacklinksBulkReferringDomainsLive", false);
     }
 
-    [Action("Search backlink bulk new lost backlinks", Description = "\u200c This endpoint will provide you with the number of new and lost backlinks for the domains, subdomains, and pages specified in the targets array.")]
+    [Action("Search backlink bulk new lost backlinks", Description = "This endpoint will provide you with the number of new and lost backlinks for the domains, subdomains, and pages specified in the targets array.")]
     public async Task<ReportResponse<BacklinksBulkNewLostBacklinksLiveResultInfo>> BacklinksBulkNewLostBacklinksLive([ActionParameter] BacklinksBulkNewLostBacklinksLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -552,7 +552,7 @@ public class BacklinksActions(InvocationContext context, IFileManagementClient f
         return await ReportWriter.Write<BacklinksBulkNewLostBacklinksLiveResultInfo>(fileManagementClient, [response], "BacklinksBulkNewLostBacklinksLive", false);
     }
 
-    [Action("Search new/lost referring domains", Description = "\u200c This endpoint will provide you with the number of referring domains pointing to the domains, subdomains and pages specified in the targets array.")]
+    [Action("Search new/lost referring domains", Description = "This endpoint will provide you with the number of referring domains pointing to the domains, subdomains and pages specified in the targets array.")]
     public async Task<ReportResponse<BacklinksBulkNewLostReferringDomainsLiveResultInfo>> BacklinksBulkNewLostReferringDomainsLive([ActionParameter] BacklinksBulkNewLostReferringDomainsLiveRequest input)
     {
         var body = new Dictionary<string, object>();

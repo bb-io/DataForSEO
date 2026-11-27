@@ -14,7 +14,7 @@ namespace Apps.DataForSEO.Actions;
 [ActionList("Content analysis")]
 public class ContentActions(InvocationContext context, IFileManagementClient fileManagementClient) : Invocable(context)
 {
-    [Action("Search content search", Description = "\u200c This endpoint will provide you with detailed citation data available for the target keyword.")]
+    [Action("Search content search", Description = "This endpoint will provide you with detailed citation data available for the target keyword.")]
     public async Task<ReportResponse<ContentAnalysisSearchLiveResultInfo>> ContentSearchLive([ActionParameter] ContentSearchLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -47,7 +47,7 @@ public class ContentActions(InvocationContext context, IFileManagementClient fil
         return await ReportWriter.Write<ContentAnalysisSearchLiveResultInfo>(fileManagementClient, responses, "ContentSearchLive", true);
     }
 
-    [Action("Get content summary", Description = "\u200c This endpoint will provide you with an overview of citation data available for the target keyword.")]
+    [Action("Get content summary", Description = "This endpoint will provide you with an overview of citation data available for the target keyword.")]
     public async Task<ReportResponse<ContentAnalysisSummaryInfo>> ContentContentAnalysisSummaryLive([ActionParameter] ContentContentAnalysisSummaryLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -103,7 +103,7 @@ public class ContentActions(InvocationContext context, IFileManagementClient fil
         return await ReportWriter.Write<ContentAnalysisSentimentAnalysisLiveResultInfo>(fileManagementClient, [response], "ContentSentimentAnalysisLive", false);
     }
 
-    [Action("Get content rating distribution", Description = "\u200c This endpoint will provide you with rating distribution data for the keyword and other parameters specified in the request.")]
+    [Action("Get content rating distribution", Description = "This endpoint will provide you with rating distribution data for the keyword and other parameters specified in the request.")]
     public async Task<ReportResponse<ContentAnalysisRatingDistributionLiveResultInfo>> ContentRatingDistributionLive([ActionParameter] ContentRatingDistributionLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -133,7 +133,7 @@ public class ContentActions(InvocationContext context, IFileManagementClient fil
         return await ReportWriter.Write<ContentAnalysisRatingDistributionLiveResultInfo>(fileManagementClient, [response], "ContentRatingDistributionLive", false);
     }
 
-    [Action("Get content phrase trends", Description = "\u200c This endpoint will provide you with data on all citations of the target keyword for the indicated date range.")]
+    [Action("Get content phrase trends", Description = "This endpoint will provide you with data on all citations of the target keyword for the indicated date range.")]
     public async Task<ReportResponse<ContentAnalysisPhraseTrendsLiveResultInfo>> ContentPhraseTrendsLive([ActionParameter] ContentPhraseTrendsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -165,7 +165,7 @@ public class ContentActions(InvocationContext context, IFileManagementClient fil
         return await ReportWriter.Write<ContentAnalysisPhraseTrendsLiveResultInfo>(fileManagementClient, [response], "ContentPhraseTrendsLive", false);
     }
 
-    [Action("Get content category trends", Description = "\u200c This endpoint will provide you with data on all citations in the target category for the indicated date range.")]
+    [Action("Get content category trends", Description = "This endpoint will provide you with data on all citations in the target category for the indicated date range.")]
     public async Task<ReportResponse<ContentAnalysisCategoryTrendsLiveResultInfo>> ContentCategoryTrendsLive([ActionParameter] ContentCategoryTrendsLiveRequest input)
     {
         var body = new Dictionary<string, object>();

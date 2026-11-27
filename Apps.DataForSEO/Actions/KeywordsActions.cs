@@ -14,7 +14,7 @@ namespace Apps.DataForSEO.Actions;
 [ActionList("Keyword data")]
 public class KeywordsActions(InvocationContext context, IFileManagementClient fileManagementClient) : Invocable(context)
 {
-    [Action("Create Google Ads search volume task", Description = "\u200c Note that Google Ads Keywords Data API is based on the latest version of the Google Ads API that has replaced legacy Google AdWords API. If you\u2019re using the provider Google AdWords API, you need to upgrade to the provider ")]
+    [Action("Create Google Ads search volume task", Description = "Note that Google Ads Keywords Data API is based on the latest version of the Google Ads API that has replaced legacy Google AdWords API. If you\u2019re using the provider Google AdWords API, you need to upgrade to the provider ")]
     public async Task<ReportResponse<DynamicResult>> KeywordsGoogleAdsSearchVolumeTaskPost([ActionParameter] KeywordsGoogleAdsSearchVolumeTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -55,7 +55,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "KeywordsGoogleAdsSearchVolumeTaskPost", false);
     }
 
-    [Action("Get Google Ads search volume results", Description = "\u200c Note that Google Ads Keywords Data API is based on the latest version of the Google Ads API that has replaced legacy Google AdWords API. If you\u2019re using the provider Google AdWords API, you need to upgrade to the provider ")]
+    [Action("Get Google Ads search volume results", Description = "Note that Google Ads Keywords Data API is based on the latest version of the Google Ads API that has replaced legacy Google AdWords API. If you\u2019re using the provider Google AdWords API, you need to upgrade to the provider ")]
     public async Task<ReportResponse<KeywordsDataGoogleAdsSearchVolumeTaskGetResultInfo>> KeywordsGoogleAdsSearchVolumeTaskGet([ActionParameter] KeywordsGoogleAdsSearchVolumeTaskGetRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -66,7 +66,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataGoogleAdsSearchVolumeTaskGetResultInfo>(fileManagementClient, [response], "KeywordsGoogleAdsSearchVolumeTaskGet", false);
     }
 
-    [Action("Search Google Ads search volume", Description = "\u200c Note that Google Ads Keywords Data API is based on the latest version of the Google Ads API that has replaced legacy Google AdWords API. If you\u2019re using the provider Google AdWords API, you need to upgrade to the provider ")]
+    [Action("Search Google Ads search volume", Description = "Note that Google Ads Keywords Data API is based on the latest version of the Google Ads API that has replaced legacy Google AdWords API. If you\u2019re using the provider Google AdWords API, you need to upgrade to the provider ")]
     public async Task<ReportResponse<KeywordsDataGoogleAdsSearchVolumeLiveResultInfo>> KeywordsGoogleAdsSearchVolumeLive([ActionParameter] KeywordsGoogleAdsSearchVolumeLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -103,7 +103,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataGoogleAdsSearchVolumeLiveResultInfo>(fileManagementClient, [response], "KeywordsGoogleAdsSearchVolumeLive", false);
     }
 
-    [Action("Create Google Ads keywords for site task", Description = "\u200c")]
+    [Action("Create Google Ads keywords for site task", Description = "")]
     public async Task<ReportResponse<DynamicResult>> KeywordsGoogleAdsKeywordsForSiteTaskPost([ActionParameter] KeywordsGoogleAdsKeywordsForSiteTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -139,7 +139,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "KeywordsGoogleAdsKeywordsForSiteTaskPost", false);
     }
 
-    [Action("Get Google Ads keywords for site results", Description = "\u200c Note that Google Ads Keywords Data API is based on the latest version of the Google Ads API that has replaced legacy Google AdWords API. If you\u2019re using the provider Google AdWords API, you need to upgrade to the provider ")]
+    [Action("Get Google Ads keywords for site results", Description = "Note that Google Ads Keywords Data API is based on the latest version of the Google Ads API that has replaced legacy Google AdWords API. If you\u2019re using the provider Google AdWords API, you need to upgrade to the provider ")]
     public async Task<ReportResponse<KeywordsDataGoogleAdsKeywordsForSiteTaskGetResultInfo>> KeywordsGoogleAdsKeywordsForSiteTaskGet([ActionParameter] KeywordsGoogleAdsKeywordsForSiteTaskGetRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -273,7 +273,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataGoogleAdsKeywordsForKeywordsLiveResultInfo>(fileManagementClient, [response], "KeywordsGoogleAdsKeywordsForKeywordsLive", false);
     }
 
-    [Action("Create Google trends explore task", Description = "\u200c This endpoint will provide you with the keyword popularity data from the \u2018Explore\u2019 feature of Google Trends. You can check keyword trends for Google Search, Google News, Google Images, Google Shopping, and YouTube.")]
+    [Action("Create Google trends explore task", Description = "This endpoint will provide you with the keyword popularity data from the \u2018Explore\u2019 feature of Google Trends. You can check keyword trends for Google Search, Google News, Google Images, Google Shopping, and YouTube.")]
     public async Task<ReportResponse<DynamicResult>> KeywordsGoogleTrendsExploreTaskPost([ActionParameter] KeywordsGoogleTrendsExploreTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -314,7 +314,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "KeywordsGoogleTrendsExploreTaskPost", false);
     }
 
-    [Action("Get Google trends explore results", Description = "\u200c")]
+    [Action("Get Google trends explore results", Description = "")]
     public async Task<ReportResponse<KeywordsDataGoogleTrendsExploreTaskGetResultInfo>> KeywordsGoogleTrendsExploreTaskGet([ActionParameter] KeywordsGoogleTrendsExploreTaskGetRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -486,7 +486,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataDataForSEOTrendsMergedDataLiveResultInfo>(fileManagementClient, [response], "KeywordsDataForSEOTrendsMergedDataLive", false);
     }
 
-    [Action("Create Bing search volume task", Description = "\u200c This endpoint will provide you with search volume data for the last month, search volume trend for up to 24 past months (that will let you estimate search volume dynamics), current cost-per-click and competition values")]
+    [Action("Create Bing search volume task", Description = "This endpoint will provide you with search volume data for the last month, search volume trend for up to 24 past months (that will let you estimate search volume dynamics), current cost-per-click and competition values")]
     public async Task<ReportResponse<DynamicResult>> KeywordsBingSearchVolumeTaskPost([ActionParameter] KeywordsBingSearchVolumeTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -527,7 +527,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "KeywordsBingSearchVolumeTaskPost", false);
     }
 
-    [Action("Get Bing search volume results", Description = "\u200c")]
+    [Action("Get Bing search volume results", Description = "")]
     public async Task<ReportResponse<KeywordsDataBingSearchVolumeTaskGetResultInfo>> KeywordsBingSearchVolumeTaskGet([ActionParameter] KeywordsBingSearchVolumeTaskGetRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -538,7 +538,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingSearchVolumeTaskGetResultInfo>(fileManagementClient, [response], "KeywordsBingSearchVolumeTaskGet", false);
     }
 
-    [Action("Search Bing search volume", Description = "\u200cThis endpoint will provide you with search volume data for the last month, search volume trend for up to 24 past months (that will let you estimate search volume dynamics), current cost-per-click and competition values ")]
+    [Action("Search Bing search volume", Description = "This endpoint will provide you with search volume data for the last month, search volume trend for up to 24 past months (that will let you estimate search volume dynamics), current cost-per-click and competition values ")]
     public async Task<ReportResponse<KeywordsDataBingSearchVolumeLiveResultInfo>> KeywordsBingSearchVolumeLive([ActionParameter] KeywordsBingSearchVolumeLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -575,7 +575,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingSearchVolumeLiveResultInfo>(fileManagementClient, [response], "KeywordsBingSearchVolumeLive", false);
     }
 
-    [Action("Create Bing keywords for site task", Description = "\u200cThis endpoint will provide you with a list of keywords relevant to the specified website along with their search volume for the last month, search volume trend for up to 24 past months (for estimating search volume dyna")]
+    [Action("Create Bing keywords for site task", Description = "This endpoint will provide you with a list of keywords relevant to the specified website along with their search volume for the last month, search volume trend for up to 24 past months (for estimating search volume dyna")]
     public async Task<ReportResponse<DynamicResult>> KeywordsBingKeywordsForSiteTaskPost([ActionParameter] KeywordsBingKeywordsForSiteTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -611,7 +611,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "KeywordsBingKeywordsForSiteTaskPost", false);
     }
 
-    [Action("Get Bing keywords for site results", Description = "\u200c This endpoint will provide you with a list of keywords relevant to the specified website along with their search volume for the last month, search volume trend for the last year (for estimating search volume dynamics),")]
+    [Action("Get Bing keywords for site results", Description = "This endpoint will provide you with a list of keywords relevant to the specified website along with their search volume for the last month, search volume trend for the last year (for estimating search volume dynamics),")]
     public async Task<ReportResponse<KeywordsDataBingKeywordsForSiteTaskGetResultInfo>> KeywordsBingKeywordsForSiteTaskGet([ActionParameter] KeywordsBingKeywordsForSiteTaskGetRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -622,7 +622,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingKeywordsForSiteTaskGetResultInfo>(fileManagementClient, [response], "KeywordsBingKeywordsForSiteTaskGet", false);
     }
 
-    [Action("Search Bing keywords for site", Description = "\u200cThis endpoint will provide you with a list of keywords relevant to the specified URL along with their search volume for the last month, search volume trend for up to 24 past months (for estimating search volume dynamics")]
+    [Action("Search Bing keywords for site", Description = "This endpoint will provide you with a list of keywords relevant to the specified URL along with their search volume for the last month, search volume trend for up to 24 past months (for estimating search volume dynamics")]
     public async Task<ReportResponse<KeywordsDataBingKeywordsForSiteLiveResultInfo>> KeywordsBingKeywordsForSiteLive([ActionParameter] KeywordsBingKeywordsForSiteLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -654,7 +654,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingKeywordsForSiteLiveResultInfo>(fileManagementClient, [response], "KeywordsBingKeywordsForSiteLive", false);
     }
 
-    [Action("Create Bing keyword ideas task", Description = "\u200c\u200c This endpoint will select relevant keywords for the specified terms. Set up to 200 keywords and get the results, which are suggested by Bing Ads for your query. You can get up to 3000 keyword suggestions using this fu")]
+    [Action("Create Bing keyword ideas task", Description = "This endpoint will select relevant keywords for the specified terms. Set up to 200 keywords and get the results, which are suggested by Bing Ads for your query. You can get up to 3000 keyword suggestions using this fu")]
     public async Task<ReportResponse<DynamicResult>> KeywordsBingKeywordsForKeywordsTaskPost([ActionParameter] KeywordsBingKeywordsForKeywordsTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -697,7 +697,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "KeywordsBingKeywordsForKeywordsTaskPost", false);
     }
 
-    [Action("Get Bing keyword ideas results", Description = "\u200c This endpoint will select relevant keywords for the specified terms. Set up to 200 keywords and get the results, which are suggested by Bing Ads for your query. You can get up to 3000 keyword suggestions using this fun")]
+    [Action("Get Bing keyword ideas results", Description = "This endpoint will select relevant keywords for the specified terms. Set up to 200 keywords and get the results, which are suggested by Bing Ads for your query. You can get up to 3000 keyword suggestions using this fun")]
     public async Task<ReportResponse<KeywordsDataBingKeywordsForKeywordsTaskGetResultInfo>> KeywordsBingKeywordsForKeywordsTaskGet([ActionParameter] KeywordsBingKeywordsForKeywordsTaskGetRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -708,7 +708,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingKeywordsForKeywordsTaskGetResultInfo>(fileManagementClient, [response], "KeywordsBingKeywordsForKeywordsTaskGet", false);
     }
 
-    [Action("Search Bing keyword ideas", Description = "\u200c This endpoint will select the relevant keywords for the specified ones. Set up to 200 keywords and get the results, which are suggested by Bing Ads for your query. You can get up to 3000 keyword suggestions using this ")]
+    [Action("Search Bing keyword ideas", Description = "This endpoint will select the relevant keywords for the specified ones. Set up to 200 keywords and get the results, which are suggested by Bing Ads for your query. You can get up to 3000 keyword suggestions using this ")]
     public async Task<ReportResponse<KeywordsDataBingKeywordsForKeywordsLiveResultInfo>> KeywordsBingKeywordsForKeywordsLive([ActionParameter] KeywordsBingKeywordsForKeywordsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -747,7 +747,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingKeywordsForKeywordsLiveResultInfo>(fileManagementClient, [response], "KeywordsBingKeywordsForKeywordsLive", false);
     }
 
-    [Action("Create Bing keyword performance task", Description = "\u200c You can receive a set of keyword performance stats for a group of keywords depending on the specified match type, location and language parameters. Ad position, clicks, impressions, and other keyword metrics are aggreg")]
+    [Action("Create Bing keyword performance task", Description = "You can receive a set of keyword performance stats for a group of keywords depending on the specified match type, location and language parameters. Ad position, clicks, impressions, and other keyword metrics are aggreg")]
     public async Task<ReportResponse<DynamicResult>> KeywordsBingKeywordPerformanceTaskPost([ActionParameter] KeywordsBingKeywordPerformanceTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -782,7 +782,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "KeywordsBingKeywordPerformanceTaskPost", false);
     }
 
-    [Action("Get Bing keyword performance results", Description = "\u200c You can receive a set of keyword performance stats for a group of keywords depending on the specified match type, location and language parameters. Ad position, clicks, impressions, and other keyword metrics are aggreg")]
+    [Action("Get Bing keyword performance results", Description = "You can receive a set of keyword performance stats for a group of keywords depending on the specified match type, location and language parameters. Ad position, clicks, impressions, and other keyword metrics are aggreg")]
     public async Task<ReportResponse<KeywordsDataBingKeywordPerformanceTaskGetResultInfo>> KeywordsBingKeywordPerformanceTaskGet([ActionParameter] KeywordsBingKeywordPerformanceTaskGetRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -793,7 +793,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingKeywordPerformanceTaskGetResultInfo>(fileManagementClient, [response], "KeywordsBingKeywordPerformanceTaskGet", false);
     }
 
-    [Action("Get Bing keyword performance", Description = "\u200c You can receive a set of keyword performance stats for a group of keywords depending on the specified match type, location and language parameters. Ad position, clicks, impressions, and other keyword metrics are aggreg")]
+    [Action("Get Bing keyword performance", Description = "You can receive a set of keyword performance stats for a group of keywords depending on the specified match type, location and language parameters. Ad position, clicks, impressions, and other keyword metrics are aggreg")]
     public async Task<ReportResponse<KeywordsDataBingKeywordPerformanceLiveResultInfo>> KeywordsBingKeywordPerformanceLive([ActionParameter] KeywordsBingKeywordPerformanceLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -824,7 +824,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingKeywordPerformanceLiveResultInfo>(fileManagementClient, [response], "KeywordsBingKeywordPerformanceLive", false);
     }
 
-    [Action("Create Bing search volume history task", Description = "\u200c This endpoint will provide you with historical search volume data for up to 1000 keywords in one request. You can get search volume for keywords in monthly, weekly, or daily format and specify the device type.")]
+    [Action("Create Bing search volume history task", Description = "This endpoint will provide you with historical search volume data for up to 1000 keywords in one request. You can get search volume for keywords in monthly, weekly, or daily format and specify the device type.")]
     public async Task<ReportResponse<DynamicResult>> KeywordsBingSearchVolumeHistoryTaskPost([ActionParameter] KeywordsBingSearchVolumeHistoryTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -863,7 +863,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "KeywordsBingSearchVolumeHistoryTaskPost", false);
     }
 
-    [Action("Get Bing search volume history results", Description = "\u200c")]
+    [Action("Get Bing search volume history results", Description = "")]
     public async Task<ReportResponse<KeywordsDataBingSearchVolumeHistoryTaskGetResultInfo>> KeywordsBingSearchVolumeHistoryTaskGet([ActionParameter] KeywordsBingSearchVolumeHistoryTaskGetRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -874,7 +874,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingSearchVolumeHistoryTaskGetResultInfo>(fileManagementClient, [response], "KeywordsBingSearchVolumeHistoryTaskGet", false);
     }
 
-    [Action("Search Bing search volume history", Description = "\u200cThis endpoint will provide you with historical search volume data for up to 1000 keywords in one request. You can get search volume for keywords in monthly, weekly, or daily format and specify the device type.")]
+    [Action("Search Bing search volume history", Description = "This endpoint will provide you with historical search volume data for up to 1000 keywords in one request. You can get search volume for keywords in monthly, weekly, or daily format and specify the device type.")]
     public async Task<ReportResponse<KeywordsDataBingSearchVolumeHistoryLiveResultInfo>> KeywordsBingSearchVolumeHistoryLive([ActionParameter] KeywordsBingSearchVolumeHistoryLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -909,7 +909,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataBingSearchVolumeHistoryLiveResultInfo>(fileManagementClient, [response], "KeywordsBingSearchVolumeHistoryLive", false);
     }
 
-    [Action("Search clickstream search volume", Description = "\u200c")]
+    [Action("Search clickstream search volume", Description = "")]
     public async Task<ReportResponse<KeywordsDataClickstreamDataDataForSEOSearchVolumeLiveResultInfo>> KeywordsClickstreamDataDataForSEOSearchVolumeLive([ActionParameter] KeywordsClickstreamDataDataForSEOSearchVolumeLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -936,7 +936,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataClickstreamDataDataForSEOSearchVolumeLiveResultInfo>(fileManagementClient, [response], "KeywordsClickstreamDataDataForSEOSearchVolumeLive", false);
     }
 
-    [Action("Search clickstream global search volume", Description = "\u200c\u200c The Clickstream Global Search Volume endpoint of the provider Keywords Data API is designed to provide clickstream-based search volume data for up to 1000 keywords in a single Live request. What\u2019s more, it offers geogra")]
+    [Action("Search clickstream global search volume", Description = "The Clickstream Global Search Volume endpoint of the provider Keywords Data API is designed to provide clickstream-based search volume data for up to 1000 keywords in a single Live request. What\u2019s more, it offers geogra")]
     public async Task<ReportResponse<KeywordsDataClickstreamDataGlobalSearchVolumeLiveResultInfo>> KeywordsClickstreamDataGlobalSearchVolumeLive([ActionParameter] KeywordsClickstreamDataGlobalSearchVolumeLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -957,7 +957,7 @@ public class KeywordsActions(InvocationContext context, IFileManagementClient fi
         return await ReportWriter.Write<KeywordsDataClickstreamDataGlobalSearchVolumeLiveResultInfo>(fileManagementClient, [response], "KeywordsClickstreamDataGlobalSearchVolumeLive", false);
     }
 
-    [Action("Search clickstream bulk search volume", Description = "\u200c\u200c The Bulk Clickstream Search Volume endpoint of the provider Keywords Data API is designed to provide clickstream-based search volume data for up to 1000 keywords in a single Live request. What\u2019s more, it offers historic")]
+    [Action("Search clickstream bulk search volume", Description = "The Bulk Clickstream Search Volume endpoint of the provider Keywords Data API is designed to provide clickstream-based search volume data for up to 1000 keywords in a single Live request. What\u2019s more, it offers historic")]
     public async Task<ReportResponse<KeywordsDataClickstreamDataBulkSearchVolumeLiveResultInfo>> KeywordsClickstreamDataBulkSearchVolumeLive([ActionParameter] KeywordsClickstreamDataBulkSearchVolumeLiveRequest input)
     {
         var body = new Dictionary<string, object>();

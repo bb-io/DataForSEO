@@ -14,7 +14,7 @@ namespace Apps.DataForSEO.Actions;
 [ActionList("Site audits")]
 public class AuditsActions(InvocationContext context, IFileManagementClient fileManagementClient) : Invocable(context)
 {
-    [Action("Stop site audit", Description = "\u200c\u200c This endpoint is designed to force stop the crawl process of websites you specified in a task. The execution of all the tasks associated with the IDs indicated in your request to this endpoint will be stopped. You wil")]
+    [Action("Stop site audit", Description = "This endpoint is designed to force stop the crawl process of websites you specified in a task. The execution of all the tasks associated with the IDs indicated in your request to this endpoint will be stopped. You wil")]
     public async Task<ReportResponse<DynamicResult>> AuditsForceStop([ActionParameter] AuditsForceStopRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -26,7 +26,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "AuditsForceStop", false);
     }
 
-    [Action("Create site audit", Description = "\u200c OnPage API checks websites for 60+ customizable on-page parameters defines and displays all found flaws and opportunities for optimization so that you can easily fix them. It checks meta tags, duplicate content, image ")]
+    [Action("Create site audit", Description = "OnPage API checks websites for 60+ customizable on-page parameters defines and displays all found flaws and opportunities for optimization so that you can easily fix them. It checks meta tags, duplicate content, image ")]
     public async Task<ReportResponse<DynamicResult>> AuditsTaskPost([ActionParameter] AuditsTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -122,7 +122,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "AuditsTaskPost", false);
     }
 
-    [Action("Get audit summary", Description = "\u200c Using this function, you can get the overall information on a website as well as drill down into exact on-page issues of a website that has been scanned. As a result, you will know what functions to use for receiving d")]
+    [Action("Get audit summary", Description = "Using this function, you can get the overall information on a website as well as drill down into exact on-page issues of a website that has been scanned. As a result, you will know what functions to use for receiving d")]
     public async Task<ReportResponse<OnPageSummaryResultInfo>> AuditsSummary([ActionParameter] AuditsSummaryRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -158,7 +158,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPagePagesResultInfo>(fileManagementClient, responses, "AuditsPages", true);
     }
 
-    [Action("Search audit pages by resource", Description = "\u200c\u200c This endpoint will return the list of pages where a specific resource is located. Using this function you will also get the data related to the pages that contain a specified resource. You can get the URL of a resourc")]
+    [Action("Search audit pages by resource", Description = "This endpoint will return the list of pages where a specific resource is located. Using this function you will also get the data related to the pages that contain a specified resource. You can get the URL of a resourc")]
     public async Task<ReportResponse<OnPagePagesByResourceResultInfo>> AuditsPagesByResource([ActionParameter] AuditsPagesByResourceRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -182,7 +182,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPagePagesByResourceResultInfo>(fileManagementClient, responses, "AuditsPagesByResource", true);
     }
 
-    [Action("Get audit resources", Description = "\u200c\u200c This endpoint will provide you with a list of resources, including images, scripts, stylesheets, and broken elements. You will get a detailed overview of every resource found on the crawled pages.")]
+    [Action("Get audit resources", Description = "This endpoint will provide you with a list of resources, including images, scripts, stylesheets, and broken elements. You will get a detailed overview of every resource found on the crawled pages.")]
     public async Task<ReportResponse<OnPageResourcesResultInfo>> AuditsResources([ActionParameter] AuditsResourcesRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -211,7 +211,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageResourcesResultInfo>(fileManagementClient, responses, "AuditsResources", true);
     }
 
-    [Action("Get audit duplicate tags", Description = "\u200c\u200c This endpoint returns a list of pages that contain duplicate title or description tags. The response also contains data related to page performance.")]
+    [Action("Get audit duplicate tags", Description = "This endpoint returns a list of pages that contain duplicate title or description tags. The response also contains data related to page performance.")]
     public async Task<ReportResponse<OnPageDuplicateTagsResultInfo>> AuditsDuplicateTags([ActionParameter] AuditsDuplicateTagsRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -233,7 +233,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageDuplicateTagsResultInfo>(fileManagementClient, responses, "AuditsDuplicateTags", true);
     }
 
-    [Action("Get audit duplicate content", Description = "\u200c\u200c This endpoint returns a list of pages that have content similar to the page specified in the request. The response also contains data related to page performance and the similarity index that indicates how similar the")]
+    [Action("Get audit duplicate content", Description = "This endpoint returns a list of pages that have content similar to the page specified in the request. The response also contains data related to page performance and the similarity index that indicates how similar the")]
     public async Task<ReportResponse<OnPageDuplicateContentResultInfo>> AuditsDuplicateContent([ActionParameter] AuditsDuplicateContentRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -255,7 +255,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageDuplicateContentResultInfo>(fileManagementClient, responses, "AuditsDuplicateContent", true);
     }
 
-    [Action("Search audit links", Description = "\u200c\u200c This endpoint will provide you with a list of internal and external links detected on a target website. The following link types are supported: anchor \u2013 links that point to a specific portion of a webpage; image \u2013 lin")]
+    [Action("Search audit links", Description = "This endpoint will provide you with a list of internal and external links detected on a target website. The following link types are supported: anchor \u2013 links that point to a specific portion of a webpage; image \u2013 lin")]
     public async Task<ReportResponse<OnPageLinksResultInfo>> AuditsLinks([ActionParameter] AuditsLinksRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -282,7 +282,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageLinksResultInfo>(fileManagementClient, responses, "AuditsLinks", true);
     }
 
-    [Action("Get audit redirect chains", Description = "\u200c\u200c Redirect chains occur when there are at least two redirects between the initial URL and the destination URL. For example, if page A redirects to page B which redirects to page C, such a series of redirects is consider")]
+    [Action("Get audit redirect chains", Description = "Redirect chains occur when there are at least two redirects between the initial URL and the destination URL. For example, if page A redirects to page B which redirects to page C, such a series of redirects is consider")]
     public async Task<ReportResponse<OnPageRedirectChainsResultInfo>> AuditsRedirectChains([ActionParameter] AuditsRedirectChainsRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -304,7 +304,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageRedirectChainsResultInfo>(fileManagementClient, responses, "AuditsRedirectChains", true);
     }
 
-    [Action("Get audit non indexable", Description = "\u200c\u200c This endpoint returns a list of pages that are blocked from being indexed by Google and other search engines through robots.txt, HTTP headers, or meta tags settings.")]
+    [Action("Get audit non indexable", Description = "This endpoint returns a list of pages that are blocked from being indexed by Google and other search engines through robots.txt, HTTP headers, or meta tags settings.")]
     public async Task<ReportResponse<OnPageNonIndexableResultInfo>> AuditsNonIndexable([ActionParameter] AuditsNonIndexableRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -322,7 +322,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageNonIndexableResultInfo>(fileManagementClient, responses, "AuditsNonIndexable", true);
     }
 
-    [Action("Get audit waterfall", Description = "\u200c\u200c This endpoint is designed to provide you with the page speed insights. Using this function you can get detailed information about the page loading time, time to secure connection, the time it takes to load page resour")]
+    [Action("Get audit waterfall", Description = "This endpoint is designed to provide you with the page speed insights. Using this function you can get detailed information about the page loading time, time to secure connection, the time it takes to load page resour")]
     public async Task<ReportResponse<OnPageWaterfallResultInfo>> AuditsWaterfall([ActionParameter] AuditsWaterfallRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -338,7 +338,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageWaterfallResultInfo>(fileManagementClient, [response], "AuditsWaterfall", false);
     }
 
-    [Action("Get audit keyword density", Description = "\u200c\u200c This endpoint will provide you with keyword density and keyword frequency data for terms appearing on the specified website or web page. You can filter and sort the data that will be retrieved with this API call.")]
+    [Action("Get audit keyword density", Description = "This endpoint will provide you with keyword density and keyword frequency data for terms appearing on the specified website or web page. You can filter and sort the data that will be retrieved with this API call.")]
     public async Task<ReportResponse<OnPageKeywordDensityResultInfo>> AuditsKeywordDensity([ActionParameter] AuditsKeywordDensityRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -362,7 +362,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageKeywordDensityResultInfo>(fileManagementClient, [response], "AuditsKeywordDensity", false);
     }
 
-    [Action("Get audit microdata", Description = "\u200c\u200c This endpoint is designed to validate structured JSON-LD data and Microdata. Using this function you will obtain microdata available on the specified page of the target website and detailed results of its validation. ")]
+    [Action("Get audit microdata", Description = "This endpoint is designed to validate structured JSON-LD data and Microdata. Using this function you will obtain microdata available on the specified page of the target website and detailed results of its validation. ")]
     public async Task<ReportResponse<OnPageMicrodataResultInfo>> AuditsMicrodata([ActionParameter] AuditsMicrodataRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -378,7 +378,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageMicrodataResultInfo>(fileManagementClient, [response], "AuditsMicrodata", false);
     }
 
-    [Action("Get audit uncrawlable resources", Description = "\u200c\u200cThis endpoint returns a list of resources detected on the target website that could not be crawled due to a content type inconsistency. A resource is considered uncrawlable when the content type returned in the server ")]
+    [Action("Get audit uncrawlable resources", Description = "This endpoint returns a list of resources detected on the target website that could not be crawled due to a content type inconsistency. A resource is considered uncrawlable when the content type returned in the server ")]
     public async Task<ReportResponse<OnPageUncrawlableResourcesResultInfo>> AuditsUncrawlableResources([ActionParameter] AuditsUncrawlableResourcesRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -398,7 +398,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageUncrawlableResourcesResultInfo>(fileManagementClient, responses, "AuditsUncrawlableResources", true);
     }
 
-    [Action("Get audit raw HTML", Description = "\u200c\u200c This endpoint returns the HTML of a page you indicate in the request.")]
+    [Action("Get audit raw HTML", Description = "This endpoint returns the HTML of a page you indicate in the request.")]
     public async Task<ReportResponse<OnPageRawHtmlResultInfo>> AuditsRawHtml([ActionParameter] AuditsRawHtmlRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -412,7 +412,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageRawHtmlResultInfo>(fileManagementClient, [response], "AuditsRawHtml", false);
     }
 
-    [Action("Get page screenshot", Description = "\u200c\u200c Using this endpoint, you can capture a full high-quality screenshot of any webpage. In this way, you can review the target page as the the provider crawler and Googlebot see it.")]
+    [Action("Get page screenshot", Description = "Using this endpoint, you can capture a full high-quality screenshot of any webpage. In this way, you can review the target page as the the provider crawler and Googlebot see it.")]
     public async Task<ReportResponse<OnPagePageScreenshotResultInfo>> AuditsPageScreenshot([ActionParameter] AuditsPageScreenshotRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -444,7 +444,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPagePageScreenshotResultInfo>(fileManagementClient, [response], "AuditsPageScreenshot", false);
     }
 
-    [Action("Get audit content parsing", Description = "\u200c\u200c This endpoint allows parsing the content on any page you specify and will return the structured content of the target page, including link URLs, anchors, headings, and textual content.")]
+    [Action("Get audit content parsing", Description = "This endpoint allows parsing the content on any page you specify and will return the structured content of the target page, including link URLs, anchors, headings, and textual content.")]
     public async Task<ReportResponse<OnPageContentParsingResultInfo>> AuditsContentParsing([ActionParameter] AuditsContentParsingRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -460,7 +460,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageContentParsingResultInfo>(fileManagementClient, [response], "AuditsContentParsing", false);
     }
 
-    [Action("Get audit content parsing report", Description = "\u200c\u200c This endpoint allows parsing the content on any page you specify and will return the structured content of the target page, including link URLs, anchors, headings, and textual content.")]
+    [Action("Get audit content parsing report", Description = "This endpoint allows parsing the content on any page you specify and will return the structured content of the target page, including link URLs, anchors, headings, and textual content.")]
     public async Task<ReportResponse<OnPageContentParsingLiveResultInfo>> AuditsContentParsingLive([ActionParameter] AuditsContentParsingLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -550,7 +550,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<OnPageInstantPagesResultInfo>(fileManagementClient, [response], "AuditsInstantPages", false);
     }
 
-    [Action("Create audit Lighthouse task", Description = "\u200cThe OnPage Lighthouse API is based on Google\u2019s open-source Lighthouse project for measuring the quality of web pages and web apps.")]
+    [Action("Create audit Lighthouse task", Description = "The OnPage Lighthouse API is based on Google\u2019s open-source Lighthouse project for measuring the quality of web pages and web apps.")]
     public async Task<ReportResponse<DynamicResult>> AuditsLighthouseTaskPost([ActionParameter] AuditsLighthouseTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -590,7 +590,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "AuditsLighthouseTaskPost", false);
     }
 
-    [Action("Get audit Lighthouse results", Description = "\u200c The OnPage Lighthouse API is based on Google\u2019s open-source Lighthouse project for measuring the quality of web pages and web apps. This endpoint will provide you with the results of Lighthouse Audit. Use the id receive")]
+    [Action("Get audit Lighthouse results", Description = "The OnPage Lighthouse API is based on Google\u2019s open-source Lighthouse project for measuring the quality of web pages and web apps. This endpoint will provide you with the results of Lighthouse Audit. Use the id receive")]
     public async Task<ReportResponse<DynamicResult>> AuditsLighthouseTaskGetJson([ActionParameter] AuditsLighthouseTaskGetJsonRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -601,7 +601,7 @@ public class AuditsActions(InvocationContext context, IFileManagementClient file
         return await ReportWriter.Write<DynamicResult>(fileManagementClient, [response], "AuditsLighthouseTaskGetJson", false);
     }
 
-    [Action("Get audit Lighthouse", Description = "\u200cThe OnPage Lighthouse API is based on Google\u2019s open-source Lighthouse project for measuring the quality of web pages and web apps.")]
+    [Action("Get audit Lighthouse", Description = "The OnPage Lighthouse API is based on Google\u2019s open-source Lighthouse project for measuring the quality of web pages and web apps.")]
     public async Task<ReportResponse<DynamicResult>> AuditsLighthouseLiveJson([ActionParameter] AuditsLighthouseLiveJsonRequest input)
     {
         var body = new Dictionary<string, object>();

@@ -30,6 +30,9 @@ public class TestBase
 
     protected async Task<object> Run(string name)
     {
+        var environment = InvocationContext.AuthenticationCredentialsProviders.FirstOrDefault(x => x.KeyName == "environment")?.Value;
+        if (environment != "sandbox")
+            Assert.Inconclusive("Action tests submit paid DataForSEO requests and run only with the sandbox environment.");
         var example = Examples[name]!;
         var assembly = typeof(Apps.DataForSEO.Application).Assembly;
         var actionType = assembly.GetType("Apps.DataForSEO.Actions." + example["actionType"]!.Value<string>())!;

@@ -44,7 +44,7 @@ public class SerpBingOrganicTaskPostRequest
     [Display("Postback data", Description = "postback_url datatype required field if you specify postback_url corresponds to the datatype that will be sent to your server possible values: regular , advanced , html")]
     [JsonProperty("postback_data")]
     [Blackbird.Applications.Sdk.Common.Dictionaries.StaticDataSource(typeof(Apps.DataForSEO.Handlers.Static.PostbackDataOptions3))]
-    public string PostbackData { get; set; } = string.Empty;
+    public string? PostbackData { get; set; }
 
     [Display("OS", Description = "device operating system optional field if you specify desktop in the device field, choose from the following values: windows , macos default value: windows if you specify mobile in the device field, choose from the following values: android , ios default value: android")]
     [JsonProperty("os")]

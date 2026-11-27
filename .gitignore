@@ -367,12 +367,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 */appsettings.json
-/Tests.Fireflies/appsettings.json
-/Tests.Fireflies/TestFiles/Output/
-*/appsettings.json
-Tests.DataForSEO/TestFiles/Output/
-
-*/appsettings.json
 Tests.DataForSEO/TestFiles/Output/
 
 # Local credentials and generated files

@@ -30,7 +30,7 @@ public class SerpGoogleSearchByImageTaskPostRequest
     [Display("Postback data", Description = "postback_url datatype required field if you specify postback_url corresponds to the datatype that will be sent to your server possible values: advanced , html")]
     [JsonProperty("postback_data")]
     [Blackbird.Applications.Sdk.Common.Dictionaries.StaticDataSource(typeof(Apps.DataForSEO.Handlers.Static.PostbackDataOptions6))]
-    public string PostbackData { get; set; } = string.Empty;
+    public string? PostbackData { get; set; }
 
     [Display("Priority", Description = "task priority optional field can take the following values: 1 \u2013 normal execution priority (set by default) 2 \u2013 high execution priority You will be additionally charged for the tasks with high execution priority. The cost can be calculated on the Pricing page")]
     [JsonProperty("priority")]

@@ -39,7 +39,7 @@ public class SerpGoogleAutocompleteTaskPostRequest
     [Display("Postback data", Description = "postback_url datatype required field if you specify postback_url corresponds to the datatype that will be sent to your server possible values: advanced")]
     [JsonProperty("postback_data")]
     [Blackbird.Applications.Sdk.Common.Dictionaries.StaticDataSource(typeof(Apps.DataForSEO.Handlers.Static.PostbackDataOptions7))]
-    public string PostbackData { get; set; } = string.Empty;
+    public string? PostbackData { get; set; }
 
     [Display("Client", Description = "search client for autocomplete optional field autocomplete results may differ depending on the search client; possible values: chrome \u2014 used when google search is opened in google chrome; chrome-omni \u2014 used in the address bar in chrome; gws-wiz \u2014 used in google search home page; gws-wiz-serp \u2014 used in google search engine results page; sa")]
     [JsonProperty("client")]

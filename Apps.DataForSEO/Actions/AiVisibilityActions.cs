@@ -14,7 +14,7 @@ namespace Apps.DataForSEO.Actions;
 [ActionList("AI visibility")]
 public class AiVisibilityActions(InvocationContext context, IFileManagementClient fileManagementClient) : Invocable(context)
 {
-    [Action("Create ChatGPT AI search task", Description = "\u200c\u200c ChatGPT LLM Scraper API provides results from ChatGPT searches. The results are specific to the selected location (see the List of Locations) and language (see the List of Languages) parameters.")]
+    [Action("Create ChatGPT AI search task", Description = "ChatGPT LLM Scraper API provides results from ChatGPT searches. The results are specific to the selected location (see the List of Locations) and language (see the List of Languages) parameters.")]
     public async Task<ReportResponse<DynamicResult>> AiVisibilityChatGptLlmScraperTaskPost([ActionParameter] AiVisibilityChatGptLlmScraperTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -34,8 +34,10 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
             body["tag"] = input.Tag;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.PingbackUrl != null)
             body["pingback_url"] = input.PingbackUrl;
         InputValidator.Validate(body);
@@ -66,7 +68,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationChatGptLlmScraperTaskGetHtmlResultInfo>(fileManagementClient, [response], "AiVisibilityChatGptLlmScraperTaskGetHtml", false);
     }
 
-    [Action("Search ChatGPT AI search", Description = "\u200c\u200c Live ChatGPT LLM Scraper endpoint provides results from ChatGPT searches. The results are specific to the selected location (see the List of Locations) and language (see the List of Languages) parameters.")]
+    [Action("Search ChatGPT AI search", Description = "Live ChatGPT LLM Scraper endpoint provides results from ChatGPT searches. The results are specific to the selected location (see the List of Locations) and language (see the List of Languages) parameters.")]
     public async Task<ReportResponse<AiOptimizationChatGptLlmScraperLiveAdvancedResultInfo>> AiVisibilityChatGptLlmScraperLiveAdvanced([ActionParameter] AiVisibilityChatGptLlmScraperLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -86,7 +88,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationChatGptLlmScraperLiveAdvancedResultInfo>(fileManagementClient, [response], "AiVisibilityChatGptLlmScraperLiveAdvanced", false);
     }
 
-    [Action("Search ChatGPT AI search HTML", Description = "\u200c Live ChatGPT LLM Scraper API HTML provides a raw HTML page of the results for the specified keyword, language, and location.")]
+    [Action("Search ChatGPT AI search HTML", Description = "Live ChatGPT LLM Scraper API HTML provides a raw HTML page of the results for the specified keyword, language, and location.")]
     public async Task<ReportResponse<AiOptimizationChatGptLlmScraperLiveHtmlResultInfo>> AiVisibilityChatGptLlmScraperLiveHtml([ActionParameter] AiVisibilityChatGptLlmScraperLiveHtmlRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -108,7 +110,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationChatGptLlmScraperLiveHtmlResultInfo>(fileManagementClient, [response], "AiVisibilityChatGptLlmScraperLiveHtml", false);
     }
 
-    [Action("Create Gemini AI search task", Description = "\u200c\u200c Gemini LLM Scraper API provides structured results from Gemini. The results are specific to the selected location (see the List of Locations) and language (see the List of Languages), and keyword.")]
+    [Action("Create Gemini AI search task", Description = "Gemini LLM Scraper API provides structured results from Gemini. The results are specific to the selected location (see the List of Locations) and language (see the List of Languages), and keyword.")]
     public async Task<ReportResponse<DynamicResult>> AiVisibilityGeminiLlmScraperTaskPost([ActionParameter] AiVisibilityGeminiLlmScraperTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -128,8 +130,10 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
             body["tag"] = input.Tag;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.PingbackUrl != null)
             body["pingback_url"] = input.PingbackUrl;
         InputValidator.Validate(body);
@@ -160,7 +164,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationGeminiLlmScraperTaskGetHtmlResultInfo>(fileManagementClient, [response], "AiVisibilityGeminiLlmScraperTaskGetHtml", false);
     }
 
-    [Action("Search Gemini AI search", Description = "\u200c\u200c Live Gemini LLM Scraper endpoint provides structured results from Gemini. The results are specific to the selected location (see the List of Locations), language (see the List of Languages), and keyword.")]
+    [Action("Search Gemini AI search", Description = "Live Gemini LLM Scraper endpoint provides structured results from Gemini. The results are specific to the selected location (see the List of Locations), language (see the List of Languages), and keyword.")]
     public async Task<ReportResponse<AiOptimizationGeminiLlmScraperLiveAdvancedResultInfo>> AiVisibilityGeminiLlmScraperLiveAdvanced([ActionParameter] AiVisibilityGeminiLlmScraperLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -180,7 +184,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationGeminiLlmScraperLiveAdvancedResultInfo>(fileManagementClient, [response], "AiVisibilityGeminiLlmScraperLiveAdvanced", false);
     }
 
-    [Action("Search Gemini AI search HTML", Description = "\u200c Live Gemini LLM Scraper API HTML provides a raw HTML page of the results for the specified keyword, language (see the List of Languages), and location (see the List of Locations).")]
+    [Action("Search Gemini AI search HTML", Description = "Live Gemini LLM Scraper API HTML provides a raw HTML page of the results for the specified keyword, language (see the List of Languages), and location (see the List of Locations).")]
     public async Task<ReportResponse<AiOptimizationGeminiLlmScraperLiveHtmlResultInfo>> AiVisibilityGeminiLlmScraperLiveHtml([ActionParameter] AiVisibilityGeminiLlmScraperLiveHtmlRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -202,7 +206,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationGeminiLlmScraperLiveHtmlResultInfo>(fileManagementClient, [response], "AiVisibilityGeminiLlmScraperLiveHtml", false);
     }
 
-    [Action("Search AI search volume", Description = "\u200c This endpoint provides search volume data for your target keywords, reflecting their estimated usage in AI tools.")]
+    [Action("Search AI search volume", Description = "This endpoint provides search volume data for your target keywords, reflecting their estimated usage in AI tools.")]
     public async Task<ReportResponse<AiOptimizationAiKeywordDataKeywordsSearchVolumeLiveResultInfo>> AiVisibilityAiKeywordDataKeywordsSearchVolumeLive([ActionParameter] AiVisibilityAiKeywordDataKeywordsSearchVolumeLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -227,7 +231,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationAiKeywordDataKeywordsSearchVolumeLiveResultInfo>(fileManagementClient, [response], "AiVisibilityAiKeywordDataKeywordsSearchVolumeLive", false);
     }
 
-    [Action("Search AI mentions search mentions", Description = "\u200c\u200c Live LLM Mentions Search endpoint provides mention data and related metrics from AI searches. The results are specific to the selected platform (google for Google\u2019s AI Overview or chat_gpt for ChatGPT), as well as loc")]
+    [Action("Search AI mentions search mentions", Description = "Live LLM Mentions Search endpoint provides mention data and related metrics from AI searches. The results are specific to the selected platform (google for Google\u2019s AI Overview or chat_gpt for ChatGPT), as well as loc")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsSearchMentionsLiveResultInfo>> AiVisibilityLlmMentionsSearchMentionsLive([ActionParameter] AiVisibilityLlmMentionsSearchMentionsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -265,7 +269,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsSearchMentionsLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsSearchMentionsLive", true);
     }
 
-    [Action("Search AI mentions target metrics", Description = "\u200c\u200c Live LLM Mentions Target Metrics endpoint provides aggregated metrics for mentions of the keywords or domains specified in the target array of the request. The results are specific to the selected platform (google for")]
+    [Action("Search AI mentions target metrics", Description = "Live LLM Mentions Target Metrics endpoint provides aggregated metrics for mentions of the keywords or domains specified in the target array of the request. The results are specific to the selected platform (google for")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTargetMetricsLiveResultInfo>> AiVisibilityLlmMentionsTargetMetricsLive([ActionParameter] AiVisibilityLlmMentionsTargetMetricsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -296,7 +300,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTargetMetricsLiveResultInfo>(fileManagementClient, [response], "AiVisibilityLlmMentionsTargetMetricsLive", false);
     }
 
-    [Action("Search AI mentions multi target metrics", Description = "\u200c\u200c Live LLM Mentions Multi-Target Metrics endpoint provides aggregated metrics grouped by custom keys for mentions of the keywords or domains specified in the target array of the request. Each item in the results array c")]
+    [Action("Search AI mentions multi target metrics", Description = "Live LLM Mentions Multi-Target Metrics endpoint provides aggregated metrics grouped by custom keys for mentions of the keywords or domains specified in the target array of the request. Each item in the results array c")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsMultiTargetMetricsLiveResultInfo>> AiVisibilityLlmMentionsMultiTargetMetricsLive([ActionParameter] AiVisibilityLlmMentionsMultiTargetMetricsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -328,7 +332,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsMultiTargetMetricsLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsMultiTargetMetricsLive", true);
     }
 
-    [Action("Search AI mentions top domains", Description = "\u200c\u200c Live LLM Mentions Top Mentioned Domains endpoint provides aggregated LLM mentions metrics grouped by the most frequently mentioned domains for the specified target. The results are specific to the selected platform (g")]
+    [Action("Search AI mentions top domains", Description = "Live LLM Mentions Top Mentioned Domains endpoint provides aggregated LLM mentions metrics grouped by the most frequently mentioned domains for the specified target. The results are specific to the selected platform (g")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTopMentionedDomainsLiveResultInfo>> AiVisibilityLlmMentionsTopMentionedDomainsLive([ActionParameter] AiVisibilityLlmMentionsTopMentionedDomainsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -373,7 +377,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTopMentionedDomainsLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsTopMentionedDomainsLive", true);
     }
 
-    [Action("Search AI mentions top pages", Description = "\u200c\u200c Live LLM Mentions Top Mentioned Pages endpoint provides aggregated LLM mentions metrics grouped by the most frequently mentioned pages for the specified target. The results are specific to the selected platform (googl")]
+    [Action("Search AI mentions top pages", Description = "Live LLM Mentions Top Mentioned Pages endpoint provides aggregated LLM mentions metrics grouped by the most frequently mentioned pages for the specified target. The results are specific to the selected platform (googl")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTopMentionedPagesLiveResultInfo>> AiVisibilityLlmMentionsTopMentionedPagesLive([ActionParameter] AiVisibilityLlmMentionsTopMentionedPagesLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -418,7 +422,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTopMentionedPagesLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsTopMentionedPagesLive", true);
     }
 
-    [Action("Search AI mentions top brands", Description = "\u200c\u200c Live LLM Mentions Top Mentioned Brands endpoint provides aggregated LLM mentions metrics grouped by the most frequently mentioned brands for the specified target. The results are specific to the selected platform, loc")]
+    [Action("Search AI mentions top brands", Description = "Live LLM Mentions Top Mentioned Brands endpoint provides aggregated LLM mentions metrics grouped by the most frequently mentioned brands for the specified target. The results are specific to the selected platform, loc")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTopMentionedBrandsLiveResultInfo>> AiVisibilityLlmMentionsTopMentionedBrandsLive([ActionParameter] AiVisibilityLlmMentionsTopMentionedBrandsLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -461,7 +465,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTopMentionedBrandsLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsTopMentionedBrandsLive", true);
     }
 
-    [Action("Search AI mentions top brand categories", Description = "\u200c\u200c Live LLM Mentions Top Mentioned Brand Categories endpoint provides aggregated LLM mentions metrics grouped by the most frequently mentioned brand categories for the specified target. The results are specific to the se")]
+    [Action("Search AI mentions top brand categories", Description = "Live LLM Mentions Top Mentioned Brand Categories endpoint provides aggregated LLM mentions metrics grouped by the most frequently mentioned brand categories for the specified target. The results are specific to the se")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTopMentionedBrandCategoriesLiveResultInfo>> AiVisibilityLlmMentionsTopMentionedBrandCategoriesLive([ActionParameter] AiVisibilityLlmMentionsTopMentionedBrandCategoriesLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -539,7 +543,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTargetMetricsLiteLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsTargetMetricsLiteLive", true);
     }
 
-    [Action("Search AI mentions top domains lite", Description = "\u200c\u200c Live LLM Mentions Top Mentioned Domains Lite endpoint is the simplified version of the Top Mentioned Domains endpoint and provides a simplified view of aggregated LLM mentions metrics grouped by the most frequently me")]
+    [Action("Search AI mentions top domains lite", Description = "Live LLM Mentions Top Mentioned Domains Lite endpoint is the simplified version of the Top Mentioned Domains endpoint and provides a simplified view of aggregated LLM mentions metrics grouped by the most frequently me")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTopMentionedDomainsLiteLiveResultInfo>> AiVisibilityLlmMentionsTopMentionedDomainsLiteLive([ActionParameter] AiVisibilityLlmMentionsTopMentionedDomainsLiteLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -584,7 +588,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTopMentionedDomainsLiteLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsTopMentionedDomainsLiteLive", true);
     }
 
-    [Action("Search AI mentions top pages lite", Description = "\u200c\u200c Live LLM Mentions Top Mentioned Pages Lite endpoint is a simplified version of the Top Mentioned Pages that provides a simplified view of aggregated LLM mentions metrics grouped by the most frequently mentioned pages ")]
+    [Action("Search AI mentions top pages lite", Description = "Live LLM Mentions Top Mentioned Pages Lite endpoint is a simplified version of the Top Mentioned Pages that provides a simplified view of aggregated LLM mentions metrics grouped by the most frequently mentioned pages ")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTopMentionedPagesLiteLiveResultInfo>> AiVisibilityLlmMentionsTopMentionedPagesLiteLive([ActionParameter] AiVisibilityLlmMentionsTopMentionedPagesLiteLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -629,7 +633,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTopMentionedPagesLiteLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsTopMentionedPagesLiteLive", true);
     }
 
-    [Action("Search AI mentions top brands lite", Description = "\u200c\u200c Live LLM Mentions Top Mentioned Brands Lite endpoint is the simplified version of the Top Mentioned Brands endpoint and provides a simplified view of aggregated LLM mentions metrics grouped by the most frequently ment")]
+    [Action("Search AI mentions top brands lite", Description = "Live LLM Mentions Top Mentioned Brands Lite endpoint is the simplified version of the Top Mentioned Brands endpoint and provides a simplified view of aggregated LLM mentions metrics grouped by the most frequently ment")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTopMentionedBrandsLiteLiveResultInfo>> AiVisibilityLlmMentionsTopMentionedBrandsLiteLive([ActionParameter] AiVisibilityLlmMentionsTopMentionedBrandsLiteLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -672,7 +676,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTopMentionedBrandsLiteLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsTopMentionedBrandsLiteLive", true);
     }
 
-    [Action("Search AI brand categories lite", Description = "\u200c\u200c Live LLM Mentions Top Mentioned Brand Categories Lite endpoint is the simplified version of the Top Mentioned Brand Categories endpoint and provides a simplified view of aggregated LLM mentions metrics grouped by the ")]
+    [Action("Search AI brand categories lite", Description = "Live LLM Mentions Top Mentioned Brand Categories Lite endpoint is the simplified version of the Top Mentioned Brand Categories endpoint and provides a simplified view of aggregated LLM mentions metrics grouped by the ")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTopMentionedBrandCategoriesLiteLiveResultInfo>> AiVisibilityLlmMentionsTopMentionedBrandCategoriesLiteLive([ActionParameter] AiVisibilityLlmMentionsTopMentionedBrandCategoriesLiteLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -715,7 +719,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTopMentionedBrandCategoriesLiteLiveResultInfo>(fileManagementClient, responses, "AiVisibilityLlmMentionsTopMentionedBrandCategoriesLiteLive", true);
     }
 
-    [Action("Search AI mentions historical", Description = "\u200c\u200c Live LLM Mentions Historical endpoint provides month-by-month historical metrics for mentions of the keywords or domains specified in the target array of the request. For each month, the response returns the total men")]
+    [Action("Search AI mentions historical", Description = "Live LLM Mentions Historical endpoint provides month-by-month historical metrics for mentions of the keywords or domains specified in the target array of the request. For each month, the response returns the total men")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsHistoricalLiveResultInfo>> AiVisibilityLlmMentionsHistoricalLive([ActionParameter] AiVisibilityLlmMentionsHistoricalLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -746,7 +750,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsHistoricalLiveResultInfo>(fileManagementClient, [response], "AiVisibilityLlmMentionsHistoricalLive", false);
     }
 
-    [Action("Search AI mentions timeseries delta", Description = "\u200c\u200c The Live LLM Mentions Timeseries Delta endpoint provides the difference in historical mentions and AI search volume data between two specified dates. The results are specific to the specified target (keyword or domain")]
+    [Action("Search AI mentions timeseries delta", Description = "The Live LLM Mentions Timeseries Delta endpoint provides the difference in historical mentions and AI search volume data between two specified dates. The results are specific to the specified target (keyword or domain")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTimeseriesDeltaLiveResultInfo>> AiVisibilityLlmMentionsTimeseriesDeltaLive([ActionParameter] AiVisibilityLlmMentionsTimeseriesDeltaLiveRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -779,7 +783,7 @@ public class AiVisibilityActions(InvocationContext context, IFileManagementClien
         return await ReportWriter.Write<AiOptimizationLlmMentionsTimeseriesDeltaLiveResultInfo>(fileManagementClient, [response], "AiVisibilityLlmMentionsTimeseriesDeltaLive", false);
     }
 
-    [Action("Search AI mentions timeseries new lost", Description = "\u200c\u200c This endpoint will provide you with the number of new and lost LLM mentions, as well as ai_search_volume for the domain or keyword specified in the target field.")]
+    [Action("Search AI mentions timeseries new lost", Description = "This endpoint will provide you with the number of new and lost LLM mentions, as well as ai_search_volume for the domain or keyword specified in the target field.")]
     public async Task<ReportResponse<AiOptimizationLlmMentionsTimeseriesNewLostLiveResultInfo>> AiVisibilityLlmMentionsTimeseriesNewLostLive([ActionParameter] AiVisibilityLlmMentionsTimeseriesNewLostLiveRequest input)
     {
         var body = new Dictionary<string, object>();

@@ -43,7 +43,7 @@ public class SerpGoogleNewsTaskPostRequest
     [Display("Postback data", Description = "postback_url datatype required field if you specify postback_url corresponds to the datatype that will be sent to your server possible values: advanced , html")]
     [JsonProperty("postback_data")]
     [Blackbird.Applications.Sdk.Common.Dictionaries.StaticDataSource(typeof(Apps.DataForSEO.Handlers.Static.PostbackDataOptions6))]
-    public string PostbackData { get; set; } = string.Empty;
+    public string? PostbackData { get; set; }
 
     [Display("OS", Description = "device operating system optional field note that this API provides results for desktop only choose from the following values: windows , macos default value: windows")]
     [JsonProperty("os")]

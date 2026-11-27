@@ -14,7 +14,7 @@ namespace Apps.DataForSEO.Actions;
 [ActionList("SERP")]
 public class SerpActions(InvocationContext context, IFileManagementClient fileManagementClient) : Invocable(context)
 {
-    [Action("Get SERP screenshot", Description = "\u200c\u200c Using the Live Page Screenshot endpoint, you can capture a screenshot of any SERP page.")]
+    [Action("Get SERP screenshot", Description = "Using the Live Page Screenshot endpoint, you can capture a screenshot of any SERP page.")]
     public async Task<ReportResponse<SerpScreenshotResultInfo>> SerpScreenshot([ActionParameter] SerpScreenshotRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -36,7 +36,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpScreenshotResultInfo>(fileManagementClient, [response], "SerpScreenshot", false);
     }
 
-    [Action("Get SERP AI summary", Description = "\u200c\u200c The purpose of the Live SERP API AI Summary endpoint is to provide a summary of the content found on any SERP and generate a response based on the user\u2019s specified prompt. To obtain results, you have to specify task_i")]
+    [Action("Get SERP AI summary", Description = "The purpose of the Live SERP API AI Summary endpoint is to provide a summary of the content found on any SERP and generate a response based on the user\u2019s specified prompt. To obtain results, you have to specify task_i")]
     public async Task<ReportResponse<SerpAiSummaryResultInfo>> SerpAiSummary([ActionParameter] SerpAiSummaryRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -56,7 +56,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpAiSummaryResultInfo>(fileManagementClient, [response], "SerpAiSummary", false);
     }
 
-    [Action("Create Google organic SERP task", Description = "\u200c\u200c SERP API provides top 10 search engine results by default. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
+    [Action("Create Google organic SERP task", Description = "SERP API provides top 10 search engine results by default. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
     public async Task<ReportResponse<DynamicResult>> SerpGoogleOrganicTaskPost([ActionParameter] SerpGoogleOrganicTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -76,8 +76,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Priority != null)
             body["priority"] = InputValidator.Code(input.Priority, "Priority");
         if (input.ResolveGotoUrls != null)
@@ -140,7 +142,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleOrganicTaskGetHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleOrganicTaskGetHtml", false);
     }
 
-    [Action("Get Google organic SERP", Description = "\u200c Live SERP provides real-time data on top search engine results for the specified keyword, search engine, and location. This endpoint will supply a complete overview of featured snippets and other extra elements of SERP")]
+    [Action("Get Google organic SERP", Description = "Live SERP provides real-time data on top search engine results for the specified keyword, search engine, and location. This endpoint will supply a complete overview of featured snippets and other extra elements of SERP")]
     public async Task<ReportResponse<SerpGoogleOrganicLiveAdvancedResultInfo>> SerpGoogleOrganicLiveAdvanced([ActionParameter] SerpGoogleOrganicLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -194,7 +196,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleOrganicLiveAdvancedResultInfo>(fileManagementClient, [response], "SerpGoogleOrganicLiveAdvanced", false);
     }
 
-    [Action("Get Google organic HTML SERP", Description = "\u200c Live SERP HTML provides a raw HTML page of search engine results for the specified keyword, search engine, and location.")]
+    [Action("Get Google organic HTML SERP", Description = "Live SERP HTML provides a raw HTML page of search engine results for the specified keyword, search engine, and location.")]
     public async Task<ReportResponse<SerpGoogleOrganicLiveHtmlResultInfo>> SerpGoogleOrganicLiveHtml([ActionParameter] SerpGoogleOrganicLiveHtmlRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -232,7 +234,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleOrganicLiveHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleOrganicLiveHtml", false);
     }
 
-    [Action("Create Google AI Mode SERP task", Description = "\u200c Google AI Mode SERP API provides search results from the AI Mode feature of Google Search.")]
+    [Action("Create Google AI Mode SERP task", Description = "Google AI Mode SERP API provides search results from the AI Mode feature of Google Search.")]
     public async Task<ReportResponse<DynamicResult>> SerpGoogleAiModeTaskPost([ActionParameter] SerpGoogleAiModeTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -250,8 +252,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Os != null)
             body["os"] = input.Os;
         if (input.Tag != null)
@@ -294,7 +298,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleAiModeTaskGetHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleAiModeTaskGetHtml", false);
     }
 
-    [Action("Get Google AI Mode SERP", Description = "\u200c\u200c Google AI Mode SERP API provides search results from the AI Mode feature of Google Search.")]
+    [Action("Get Google AI Mode SERP", Description = "Google AI Mode SERP API provides search results from the AI Mode feature of Google Search.")]
     public async Task<ReportResponse<SerpGoogleAiModeLiveAdvancedResultInfo>> SerpGoogleAiModeLiveAdvanced([ActionParameter] SerpGoogleAiModeLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -326,7 +330,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleAiModeLiveAdvancedResultInfo>(fileManagementClient, [response], "SerpGoogleAiModeLiveAdvanced", false);
     }
 
-    [Action("Get Google AI Mode HTML SERP", Description = "\u200c Live SERP HTML provides a raw HTML page of a Google AI Mode search result for the specified keyword and location.")]
+    [Action("Get Google AI Mode HTML SERP", Description = "Live SERP HTML provides a raw HTML page of a Google AI Mode search result for the specified keyword and location.")]
     public async Task<ReportResponse<SerpGoogleAiModeLiveHtmlResultInfo>> SerpGoogleAiModeLiveHtml([ActionParameter] SerpGoogleAiModeLiveHtmlRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -350,7 +354,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleAiModeLiveHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleAiModeLiveHtml", false);
     }
 
-    [Action("Create Google maps SERP task", Description = "\u200c\u200c SERP API provides top 100 search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
+    [Action("Create Google maps SERP task", Description = "SERP API provides top 100 search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
     public async Task<ReportResponse<DynamicResult>> SerpGoogleMapsTaskPost([ActionParameter] SerpGoogleMapsTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -370,8 +374,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Os != null)
             body["os"] = input.Os;
         if (input.MaxCrawlPages != null)
@@ -405,7 +411,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleMapsTaskGetAdvancedResultInfo>(fileManagementClient, [response], "SerpGoogleMapsTaskGetAdvanced", false);
     }
 
-    [Action("Get Google maps SERP", Description = "\u200c\u200c Live Google Maps SERP provides real-time data on top 100 search engine results for the specified keyword, search engine, and location.")]
+    [Action("Get Google maps SERP", Description = "Live Google Maps SERP provides real-time data on top 100 search engine results for the specified keyword, search engine, and location.")]
     public async Task<ReportResponse<SerpGoogleMapsLiveAdvancedResultInfo>> SerpGoogleMapsLiveAdvanced([ActionParameter] SerpGoogleMapsLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -441,7 +447,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleMapsLiveAdvancedResultInfo>(fileManagementClient, [response], "SerpGoogleMapsLiveAdvanced", false);
     }
 
-    [Action("Create Google local finder SERP task", Description = "\u200c\u200c Google Local Finder SERP API provides top search engine results specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
+    [Action("Create Google local finder SERP task", Description = "Google Local Finder SERP API provides top search engine results specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
     public async Task<ReportResponse<DynamicResult>> SerpGoogleLocalFinderTaskPost([ActionParameter] SerpGoogleLocalFinderTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -463,8 +469,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Os != null)
             body["os"] = input.Os;
         if (input.Tag != null)
@@ -499,7 +507,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleLocalFinderTaskGetHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleLocalFinderTaskGetHtml", false);
     }
 
-    [Action("Get Google local finder SERP", Description = "\u200c\u200c Live Google Local_finder SERP provides real-time search engine results for the specified keyword and location.")]
+    [Action("Get Google local finder SERP", Description = "Live Google Local_finder SERP provides real-time search engine results for the specified keyword and location.")]
     public async Task<ReportResponse<SerpGoogleLocalFinderLiveAdvancedResultInfo>> SerpGoogleLocalFinderLiveAdvanced([ActionParameter] SerpGoogleLocalFinderLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -527,7 +535,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleLocalFinderLiveAdvancedResultInfo>(fileManagementClient, [response], "SerpGoogleLocalFinderLiveAdvanced", false);
     }
 
-    [Action("Get Google local HTML SERP", Description = "\u200c Live Google Local Finder SERP HTML provides a raw HTML page of the search engine results for the specified keyword, search engine, and location.")]
+    [Action("Get Google local HTML SERP", Description = "Live Google Local Finder SERP HTML provides a raw HTML page of the search engine results for the specified keyword, search engine, and location.")]
     public async Task<ReportResponse<SerpGoogleLocalFinderLiveHtmlResultInfo>> SerpGoogleLocalFinderLiveHtml([ActionParameter] SerpGoogleLocalFinderLiveHtmlRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -557,7 +565,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleLocalFinderLiveHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleLocalFinderLiveHtml", false);
     }
 
-    [Action("Create Google news SERP task", Description = "\u200c\u200c SERP API provides top search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
+    [Action("Create Google news SERP task", Description = "SERP API provides top search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
     public async Task<ReportResponse<DynamicResult>> SerpGoogleNewsTaskPost([ActionParameter] SerpGoogleNewsTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -577,8 +585,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Os != null)
             body["os"] = input.Os;
         if (input.Tag != null)
@@ -629,7 +639,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleNewsTaskGetHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleNewsTaskGetHtml", false);
     }
 
-    [Action("Get Google news SERP", Description = "\u200c\u200c Live Google News SERP provides real-time data on top search engine results for the specified keyword, search engine, and location.")]
+    [Action("Get Google news SERP", Description = "Live Google News SERP provides real-time data on top search engine results for the specified keyword, search engine, and location.")]
     public async Task<ReportResponse<SerpGoogleNewsLiveAdvancedResultInfo>> SerpGoogleNewsLiveAdvanced([ActionParameter] SerpGoogleNewsLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -669,7 +679,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleNewsLiveAdvancedResultInfo>(fileManagementClient, [response], "SerpGoogleNewsLiveAdvanced", false);
     }
 
-    [Action("Get Google news HTML SERP", Description = "\u200c Live SERP HTML provides a raw HTML page of 10 search engine results for the specified keyword, search engine, and location.")]
+    [Action("Get Google news HTML SERP", Description = "Live SERP HTML provides a raw HTML page of 10 search engine results for the specified keyword, search engine, and location.")]
     public async Task<ReportResponse<SerpGoogleNewsLiveHtmlResultInfo>> SerpGoogleNewsLiveHtml([ActionParameter] SerpGoogleNewsLiveHtmlRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -701,7 +711,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleNewsLiveHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleNewsLiveHtml", false);
     }
 
-    [Action("Create Google images SERP task", Description = "\u200c\u200c SERP API provides top 100 search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
+    [Action("Create Google images SERP task", Description = "SERP API provides top 100 search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
     public async Task<ReportResponse<DynamicResult>> SerpGoogleImagesTaskPost([ActionParameter] SerpGoogleImagesTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -719,8 +729,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Os != null)
             body["os"] = input.Os;
         if (input.Tag != null)
@@ -763,7 +775,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleImagesTaskGetHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleImagesTaskGetHtml", false);
     }
 
-    [Action("Get Google images SERP", Description = "\u200c Live Google Images SERP provides real-time data on top 100 images results for the specified keyword, search engine, and location.")]
+    [Action("Get Google images SERP", Description = "Live Google Images SERP provides real-time data on top 100 images results for the specified keyword, search engine, and location.")]
     public async Task<ReportResponse<SerpGoogleImagesLiveAdvancedResultInfo>> SerpGoogleImagesLiveAdvanced([ActionParameter] SerpGoogleImagesLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -795,7 +807,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleImagesLiveAdvancedResultInfo>(fileManagementClient, [response], "SerpGoogleImagesLiveAdvanced", false);
     }
 
-    [Action("Get Google images HTML SERP", Description = "\u200c Live SERP HTML provides a raw HTML page of 100 search engine results for the specified keyword, search engine, and location.")]
+    [Action("Get Google images HTML SERP", Description = "Live SERP HTML provides a raw HTML page of 100 search engine results for the specified keyword, search engine, and location.")]
     public async Task<ReportResponse<SerpGoogleImagesLiveHtmlResultInfo>> SerpGoogleImagesLiveHtml([ActionParameter] SerpGoogleImagesLiveHtmlRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -827,7 +839,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleImagesLiveHtmlResultInfo>(fileManagementClient, [response], "SerpGoogleImagesLiveHtml", false);
     }
 
-    [Action("Create Google search by image SERP task", Description = "\u200c\u200c Google Search By Image SERP API provides up to top 100 search engine results based on the image you specified. These results are specific to the selected location (see the List of Locations) and language (see the List")]
+    [Action("Create Google search by image SERP task", Description = "Google Search By Image SERP API provides up to top 100 search engine results based on the image you specified. These results are specific to the selected location (see the List of Locations) and language (see the List")]
     public async Task<ReportResponse<DynamicResult>> SerpGoogleSearchByImageTaskPost([ActionParameter] SerpGoogleSearchByImageTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -841,8 +853,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Priority != null)
             body["priority"] = InputValidator.Code(input.Priority, "Priority");
         if (input.ResolveGotoUrls != null)
@@ -882,7 +896,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleSearchByImageTaskGetAdvancedResultInfo>(fileManagementClient, [response], "SerpGoogleSearchByImageTaskGetAdvanced", false);
     }
 
-    [Action("Create Google autocomplete SERP task", Description = "\u200c\u200c Google Autocomplete is a feature within Google Search that improves the search experience by allowing users to complete searches they started to type. the provider SERP API will provide you with all the suggestions Goog")]
+    [Action("Create Google autocomplete SERP task", Description = "Google Autocomplete is a feature within Google Search that improves the search experience by allowing users to complete searches they started to type. the provider SERP API will provide you with all the suggestions Goog")]
     public async Task<ReportResponse<DynamicResult>> SerpGoogleAutocompleteTaskPost([ActionParameter] SerpGoogleAutocompleteTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -900,8 +914,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Client != null)
             body["client"] = input.Client;
         if (input.Tag != null)
@@ -923,7 +939,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpGoogleAutocompleteTaskGetAdvancedResultInfo>(fileManagementClient, [response], "SerpGoogleAutocompleteTaskGetAdvanced", false);
     }
 
-    [Action("Get Google autocomplete SERP", Description = "\u200c\u200c Google Autocomplete is a feature within Google Search that improves the search experience by allowing users to complete searches they started to type. the provider SERP API will provide you with all the suggestions Goog")]
+    [Action("Get Google autocomplete SERP", Description = "Google Autocomplete is a feature within Google Search that improves the search experience by allowing users to complete searches they started to type. the provider SERP API will provide you with all the suggestions Goog")]
     public async Task<ReportResponse<SerpGoogleAutocompleteLiveAdvancedResultInfo>> SerpGoogleAutocompleteLiveAdvanced([ActionParameter] SerpGoogleAutocompleteLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -965,8 +981,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Os != null)
             body["os"] = input.Os;
         if (input.Tag != null)
@@ -1089,7 +1107,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpBingOrganicLiveHtmlResultInfo>(fileManagementClient, [response], "SerpBingOrganicLiveHtml", false);
     }
 
-    [Action("Create YouTube video info SERP task", Description = "\u200c\u200c YouTube Video Info API provides detailed information about the video you specify in the POST request. You will get data from the watching page containing key video and content metrics as well as the channel where the ")]
+    [Action("Create YouTube video info SERP task", Description = "YouTube Video Info API provides detailed information about the video you specify in the POST request. You will get data from the watching page containing key video and content metrics as well as the channel where the ")]
     public async Task<ReportResponse<DynamicResult>> SerpYoutubeVideoInfoTaskPost([ActionParameter] SerpYoutubeVideoInfoTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -1107,8 +1125,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Os != null)
             body["os"] = input.Os;
         if (input.Tag != null)
@@ -1130,7 +1150,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpYoutubeVideoInfoTaskGetAdvancedResultInfo>(fileManagementClient, [response], "SerpYoutubeVideoInfoTaskGetAdvanced", false);
     }
 
-    [Action("Get YouTube video info SERP", Description = "\u200c Live YouTube Video Info provides real-time data on the video you specify in the request. You will get data from the watching page containing key video and content metrics as well as the channel where the video is publi")]
+    [Action("Get YouTube video info SERP", Description = "Live YouTube Video Info provides real-time data on the video you specify in the request. You will get data from the watching page containing key video and content metrics as well as the channel where the video is publi")]
     public async Task<ReportResponse<SerpYoutubeVideoInfoLiveAdvancedResultInfo>> SerpYoutubeVideoInfoLiveAdvanced([ActionParameter] SerpYoutubeVideoInfoLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -1152,7 +1172,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpYoutubeVideoInfoLiveAdvancedResultInfo>(fileManagementClient, [response], "SerpYoutubeVideoInfoLiveAdvanced", false);
     }
 
-    [Action("Create YouTube organic SERP task", Description = "\u200c\u200c YouTube Organic API provides the top 20 blocks of search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
+    [Action("Create YouTube organic SERP task", Description = "YouTube Organic API provides the top 20 blocks of search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
     public async Task<ReportResponse<DynamicResult>> SerpYoutubeOrganicTaskPost([ActionParameter] SerpYoutubeOrganicTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -1170,8 +1190,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["pingback_url"] = input.PingbackUrl;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.Os != null)
             body["os"] = input.Os;
         if (input.Tag != null)
@@ -1197,7 +1219,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpYoutubeOrganicTaskGetAdvancedResultInfo>(fileManagementClient, [response], "SerpYoutubeOrganicTaskGetAdvanced", false);
     }
 
-    [Action("Get YouTube organic SERP", Description = "\u200c Live SERP provides real-time data on the top 20 blocks of YouTube search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings")]
+    [Action("Get YouTube organic SERP", Description = "Live SERP provides real-time data on the top 20 blocks of YouTube search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings")]
     public async Task<ReportResponse<SerpYoutubeOrganicLiveAdvancedResultInfo>> SerpYoutubeOrganicLiveAdvanced([ActionParameter] SerpYoutubeOrganicLiveAdvancedRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -1223,7 +1245,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpYoutubeOrganicLiveAdvancedResultInfo>(fileManagementClient, [response], "SerpYoutubeOrganicLiveAdvanced", false);
     }
 
-    [Action("Create Yahoo organic SERP task", Description = "\u200c\u200c SERP API provides top search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
+    [Action("Create Yahoo organic SERP task", Description = "SERP API provides top search engine results. These results are specific to the selected location (see the List of Locations) and language (see the List of Languages) settings.")]
     public async Task<ReportResponse<DynamicResult>> SerpYahooOrganicTaskPost([ActionParameter] SerpYahooOrganicTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -1255,8 +1277,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["tag"] = input.Tag;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.PingbackUrl != null)
             body["pingback_url"] = input.PingbackUrl;
         InputValidator.Validate(body);
@@ -1383,8 +1407,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["tag"] = input.Tag;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.PingbackUrl != null)
             body["pingback_url"] = input.PingbackUrl;
         InputValidator.Validate(body);
@@ -1415,7 +1441,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpBaiduOrganicTaskGetHtmlResultInfo>(fileManagementClient, [response], "SerpBaiduOrganicTaskGetHtml", false);
     }
 
-    [Action("Create Naver organic SERP task", Description = "\u200c\u200c Naver SERP API provides top 20 search engine results. Naver search results do not vary by location and language, and the search parameters for this search engine do not contain language and location variables. However")]
+    [Action("Create Naver organic SERP task", Description = "Naver SERP API provides top 20 search engine results. Naver search results do not vary by location and language, and the search parameters for this search engine do not contain language and location variables. However")]
     public async Task<ReportResponse<DynamicResult>> SerpNaverOrganicTaskPost([ActionParameter] SerpNaverOrganicTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -1441,8 +1467,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["tag"] = input.Tag;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.PingbackUrl != null)
             body["pingback_url"] = input.PingbackUrl;
         InputValidator.Validate(body);
@@ -1473,7 +1501,7 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
         return await ReportWriter.Write<SerpNaverOrganicTaskGetHtmlResultInfo>(fileManagementClient, [response], "SerpNaverOrganicTaskGetHtml", false);
     }
 
-    [Action("Create Seznam organic SERP task", Description = "\u200c\u200c Seznam SERP API provides top 10 search engine results from one of the most popular search engines in the Czech Republic. Seznam is focused on the local search market, and thus supports the Czech language only.")]
+    [Action("Create Seznam organic SERP task", Description = "Seznam SERP API provides top 10 search engine results from one of the most popular search engines in the Czech Republic. Seznam is focused on the local search market, and thus supports the Czech language only.")]
     public async Task<ReportResponse<DynamicResult>> SerpSeznamOrganicTaskPost([ActionParameter] SerpSeznamOrganicTaskPostRequest input)
     {
         var body = new Dictionary<string, object>();
@@ -1505,8 +1533,10 @@ public class SerpActions(InvocationContext context, IFileManagementClient fileMa
             body["tag"] = input.Tag;
         if (input.PostbackUrl != null)
             body["postback_url"] = input.PostbackUrl;
-        InputValidator.Required(input.PostbackData, "Postback data");
-        body["postback_data"] = input.PostbackData;
+        if (input.PostbackUrl != null)
+            InputValidator.Required(input.PostbackData, "Postback data");
+        if (input.PostbackData != null)
+            body["postback_data"] = input.PostbackData;
         if (input.PingbackUrl != null)
             body["pingback_url"] = input.PingbackUrl;
         InputValidator.Validate(body);
