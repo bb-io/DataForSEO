@@ -1,0 +1,10 @@
+using Apps.DataForSEO.Models.Requests;
+using Blackbird.Applications.Sdk.Common;
+using Blackbird.Applications.Sdk.Common.Invocation;
+
+namespace Apps.DataForSEO.Handlers;
+
+public class KeywordsBingKeywordPerformanceLiveLanguageCodeHandler(InvocationContext context, [ActionParameter] KeywordsBingKeywordPerformanceLiveRequest input)
+    : CatalogueHandler(context, "/v3/keywords_data/bing/keyword_performance/locations_and_languages", "language", input.LocationCode, null, "")
+{
+}

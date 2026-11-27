@@ -367,3 +367,11 @@ MigrationBackup/
 FodyWeavers.xsd
 
 */appsettings.json
+Tests.DataForSEO/TestFiles/Output/
+
+# Local credentials and generated files
+.env
+.env.*
+!*.env.example
+*.runsettings
+**/appsettings.local.json
